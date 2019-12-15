@@ -1,0 +1,44 @@
+\documentclass[a4paper,titlepage]{article}
+
+
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{changepage}
+\usepackage{titling}
+
+\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+
+\title{Community Detection based on Modularity on the GPU}
+\author{Fontolan Federico}
+
+
+\begin{document}
+	\input{0-resources/title-page/title-page.tex}
+	
+	\begin{abstract}
+		Modularity algorithms for the detection of communities are the de facto standard thanks to the fact that they offer the best result between efficiency and result. 
+		Moreover these algorithms allow to analyze graphs much larger than those that can be analyzed with alternative techniques. Among these the Louvain algorithm has become extremely popular due to its simplicity, efficiency and precision.\\
+		In this thesis will be presented an overview of community detection techniques and a new parallel implementation of the Louvain algorithm written in CUDA and exploitable by Nvdia GPUs.
+	\end{abstract}
+
+	\tableofcontents
+	\newpage
+	
+	\input{1-introduction/1-introduction.tex}
+	
+	\input{2-community-detection/2-community-detection.tex}
+	
+	\input{3-modularity/3-modularity.tex}
+	
+	\input{4-CUDA/4-CUDA.tex}
+	
+	\input{5-implementation/5-implementation.tex}
+	
+	\input{6-results/6-results.tex}
+	
+	\input{7-conclusion/7-conclusion.tex}
+
+
+\end{document}
