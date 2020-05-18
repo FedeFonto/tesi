@@ -1,0 +1,261 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.0 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global}
+    \entry{random}{article}{}
+      \name{author}{1}{}{%
+        {{hash=34988b2875db74607f89a2a58f877bf7}{%
+           family={P.Erdös},
+           familyi={P\bibinitperiod},
+           given={A.Rényi},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{34988b2875db74607f89a2a58f877bf7}
+      \strng{fullhash}{34988b2875db74607f89a2a58f877bf7}
+      \strng{bibnamehash}{34988b2875db74607f89a2a58f877bf7}
+      \strng{authorbibnamehash}{34988b2875db74607f89a2a58f877bf7}
+      \strng{authornamehash}{34988b2875db74607f89a2a58f877bf7}
+      \strng{authorfullhash}{34988b2875db74607f89a2a58f877bf7}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Publ. Math. Debrecen 6}
+      \field{month}{12}
+      \field{title}{On Random Graphs}
+      \field{year}{1959}
+      \field{pages}{290\bibrangedash 297}
+      \range{pages}{8}
+    \endentry
+    \entry{dsp}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5738c4148dc847446a765cc24db12c99}{%
+           family={Solla\bibnamedelima Price},
+           familyi={S\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={Derek\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for the Advancement of Science}%
+      }
+      \strng{namehash}{5738c4148dc847446a765cc24db12c99}
+      \strng{fullhash}{5738c4148dc847446a765cc24db12c99}
+      \strng{bibnamehash}{5738c4148dc847446a765cc24db12c99}
+      \strng{authorbibnamehash}{5738c4148dc847446a765cc24db12c99}
+      \strng{authornamehash}{5738c4148dc847446a765cc24db12c99}
+      \strng{authorfullhash}{5738c4148dc847446a765cc24db12c99}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0036-8075}
+      \field{journaltitle}{Science}
+      \field{number}{3683}
+      \field{title}{Networks of Scientific Papers}
+      \field{volume}{149}
+      \field{year}{1965}
+      \field{pages}{510\bibrangedash 515}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1126/science.149.3683.510
+      \endverb
+      \verb{eprint}
+      \verb https://science.sciencemag.org/content/149/3683/510.full.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://science.sciencemag.org/content/149/3683/510
+      \endverb
+      \verb{url}
+      \verb https://science.sciencemag.org/content/149/3683/510
+      \endverb
+    \endentry
+    \entry{Zac77}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5f2ac84a9075d9c65950294a1c6de1cb}{%
+           family={Zachary},
+           familyi={Z\bibinitperiod},
+           given={W.W.},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{5f2ac84a9075d9c65950294a1c6de1cb}
+      \strng{fullhash}{5f2ac84a9075d9c65950294a1c6de1cb}
+      \strng{bibnamehash}{5f2ac84a9075d9c65950294a1c6de1cb}
+      \strng{authorbibnamehash}{5f2ac84a9075d9c65950294a1c6de1cb}
+      \strng{authornamehash}{5f2ac84a9075d9c65950294a1c6de1cb}
+      \strng{authorfullhash}{5f2ac84a9075d9c65950294a1c6de1cb}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Anthropological Research}
+      \field{title}{An information flow model for conflict and fission in small groups}
+      \field{volume}{33}
+      \field{year}{1977}
+      \field{pages}{452\bibrangedash 473}
+      \range{pages}{22}
+      \keyw{imported}
+    \endentry
+    \entry{Barab}{article}{}
+      \name{author}{2}{}{%
+        {{hash=15bacd7ddfc866c5dd96976d4b0244d5}{%
+           family={Barab{á}si},
+           familyi={B\bibinitperiod},
+           given={Albert-L{á}szl{ó}},
+           giveni={A\bibinithyphendelim L\bibinitperiod}}}%
+        {{hash=d85e8d2b76e8626b1a45373f4e027914}{%
+           family={Albert},
+           familyi={A\bibinitperiod},
+           given={R{é}ka},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for the Advancement of Science}%
+      }
+      \strng{namehash}{b4063d5171bad9750494dbdb05406431}
+      \strng{fullhash}{b4063d5171bad9750494dbdb05406431}
+      \strng{bibnamehash}{b4063d5171bad9750494dbdb05406431}
+      \strng{authorbibnamehash}{b4063d5171bad9750494dbdb05406431}
+      \strng{authornamehash}{b4063d5171bad9750494dbdb05406431}
+      \strng{authorfullhash}{b4063d5171bad9750494dbdb05406431}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Systems as diverse as genetic networks or the World Wide Web are best described as networks with complex topology. A common property of many large networks is that the vertex connectivities follow a scale-free power-law distribution. This feature was found to be a consequence of two generic mechanisms: (i) networks expand continuously by the addition of new vertices, and (ii) new vertices attach preferentially to sites that are already well connected. A model based on these two ingredients reproduces the observed stationary scale-free distributions, which indicates that the development of large networks is governed by robust self-organizing phenomena that go beyond the particulars of the individual systems.}
+      \field{issn}{0036-8075}
+      \field{journaltitle}{Science}
+      \field{number}{5439}
+      \field{title}{Emergence of Scaling in Random Networks}
+      \field{volume}{286}
+      \field{year}{1999}
+      \field{pages}{509\bibrangedash 512}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1126/science.286.5439.509
+      \endverb
+      \verb{eprint}
+      \verb https://science.sciencemag.org/content/286/5439/509.full.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://science.sciencemag.org/content/286/5439/509
+      \endverb
+      \verb{url}
+      \verb https://science.sciencemag.org/content/286/5439/509
+      \endverb
+    \endentry
+    \entry{metastasis}{article}{}
+      \name{author}{4}{}{%
+        {{hash=5f5add348ddd7769b5aafb9400c3536c}{%
+           family={Jonsson},
+           familyi={J\bibinitperiod},
+           given={Pall\bibnamedelima F.},
+           giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=dca4e1e600ad5c83ae3ab1dc9357c13c}{%
+           family={Cavanna},
+           familyi={C\bibinitperiod},
+           given={Tamara},
+           giveni={T\bibinitperiod}}}%
+        {{hash=45a784a60ff5f21ff70d567162f0bd66}{%
+           family={Zicha},
+           familyi={Z\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=b678fe5ecbb7c379dddc4fc430e12417}{%
+           family={Bates},
+           familyi={B\bibinitperiod},
+           given={Paul\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a5f697742ef2a5f41fa55d70a983f4bb}
+      \strng{fullhash}{ab1fe32facdc9702d7c978dc3041d33b}
+      \strng{bibnamehash}{a5f697742ef2a5f41fa55d70a983f4bb}
+      \strng{authorbibnamehash}{a5f697742ef2a5f41fa55d70a983f4bb}
+      \strng{authornamehash}{a5f697742ef2a5f41fa55d70a983f4bb}
+      \strng{authorfullhash}{ab1fe32facdc9702d7c978dc3041d33b}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Protein-protein interactions have traditionally been studied on a small scale, using classical biochemical methods to investigate the proteins of interest. More recently large-scale methods, such as two-hybrid screens, have been utilised to survey extensive portions of genomes. Current high-throughput approaches have a relatively high rate of errors, whereas in-depth biochemical studies are too expensive and time-consuming to be practical for extensive studies. As a result, there are gaps in our knowledge of many key biological networks, for which computational approaches are particularly suitable.}
+      \field{issn}{1471-2105}
+      \field{journaltitle}{BMC Bioinformatics}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Cluster analysis of networks generated through homology: automatic identification of important protein communities involved in cancer metastasis}
+      \field{volume}{7}
+      \field{year}{2006}
+      \field{pages}{2}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1186/1471-2105-7-2
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1186/1471-2105-7-2
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1186/1471-2105-7-2
+      \endverb
+    \endentry
+    \entry{fortunato}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3f057d4175c110c6302b495f38eebcb6}{%
+           family={Fortunato},
+           familyi={F\bibinitperiod},
+           given={Santo},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier BV}%
+      }
+      \strng{namehash}{3f057d4175c110c6302b495f38eebcb6}
+      \strng{fullhash}{3f057d4175c110c6302b495f38eebcb6}
+      \strng{bibnamehash}{3f057d4175c110c6302b495f38eebcb6}
+      \strng{authorbibnamehash}{3f057d4175c110c6302b495f38eebcb6}
+      \strng{authornamehash}{3f057d4175c110c6302b495f38eebcb6}
+      \strng{authorfullhash}{3f057d4175c110c6302b495f38eebcb6}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0370-1573}
+      \field{journaltitle}{Physics Reports}
+      \field{month}{2}
+      \field{number}{3-5}
+      \field{title}{Community detection in graphs}
+      \field{volume}{486}
+      \field{year}{2010}
+      \field{pages}{75\bibrangedash 174}
+      \range{pages}{100}
+      \verb{doi}
+      \verb 10.1016/j.physrep.2009.11.002
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/j.physrep.2009.11.002
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/j.physrep.2009.11.002
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

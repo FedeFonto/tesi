@@ -1,4 +1,4 @@
-\documentclass[a4paper,titlepage]{article}
+\documentclass[12pt,a4paper,titlepage]{article}
 
 
 \usepackage{listings}
@@ -7,10 +7,16 @@
 \usepackage{geometry}
 \usepackage{changepage}
 \usepackage{titling}
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=ynt
+]{biblatex}
+\addbibresource{bibliography.bib}
+\linespread{1.5}
+\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=3cm,rmargin=3cm}
 
-\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
-
-\title{Community Detection based on Modularity on the GPU}
+\title{Modularity Community Detection on the GPU}
 \author{Fontolan Federico}
 
 
@@ -18,27 +24,27 @@
 	\input{0-resources/title-page/title-page.tex}
 	
 	\begin{abstract}
-		Modularity algorithms for the detection of communities are the de facto standard thanks to the fact that they offer the best result between efficiency and result. 
-		Moreover these algorithms allow to analyze graphs much larger than those that can be analyzed with alternative techniques. Among these the Louvain algorithm has become extremely popular due to its simplicity, efficiency and precision.\\
-		In this thesis will be presented an overview of community detection techniques and a new parallel implementation of the Louvain algorithm written in CUDA and exploitable by Nvdia GPUs.
+		Modularity algorithms for the detection of communities are the de facto standard thanks to the fact that they offer the best result between efficiency and result. \\
+		Moreover, these algorithms allow analyzing graphs much larger than those that can be analyzed with alternative techniques. Among these, the Louvain algorithm has become extremely popular due to its simplicity, efficiency and precision.\\
+		In this thesis will be presented an overview of community detection techniques and two new parallel implementations of the Louvain algorithm written in CUDA and exploitable by Nvidia GPUs: the first one is based on the sort-reduce paradigm with a pruning approach on the input data; the second one is a new hash-based implementation. Furthermore, it will be presented an analysis between these two approaches.
 	\end{abstract}
 
 	\tableofcontents
 	\newpage
-	
 	\input{1-introduction/1-introduction.tex}
-	
+	\newpage
 	\input{2-community-detection/2-community-detection.tex}
-	
+	\newpage
 	\input{3-modularity/3-modularity.tex}
-	
+	\newpage
 	\input{4-CUDA/4-CUDA.tex}
-	
+	\newpage
 	\input{5-implementation/5-implementation.tex}
-	
+	\newpage
 	\input{6-results/6-results.tex}
-	
+	\newpage
 	\input{7-conclusion/7-conclusion.tex}
-
+	\newpage
+	\printbibliography
 
 \end{document}
