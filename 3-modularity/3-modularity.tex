@@ -1,3 +1,36 @@
 \section{Modularity Optimization}
-\subsection{Sequential Algorithm}
-\subsection{Parallel Algorithm}
+Historically, the modularity function $Q$ was introduced as a stop criterion for the Girvan and Newman algorithm in 2002. This is a quality function, i.e. a function that allows distinguishing from a "good" cluster and a "bad" one. The function assigns to a partition a score that is used to compare partitions. This is not a trivial goal, because define if a partition is better than another is an ill-posed question: the answer may depend on the particular concept of community that it is adopted. Nevertheless, this sometimes is necessary, for example in the case of hierarchical clustering, where it's necessary to identify the best partition in the hierarchies. A simple example of this kind of function are the sum of the difference between internal degree $k_v^{int}$ and the external degree $k_v^{ext}$ [\ref{local-def}]. \\
+The modularity function became very popular and a lot of methods based on this quality function were created.
+In this chapter we present the functions and its limits in details, the algorithm in witch it was firstly used, some optimization techniques based on modularity and indeed the Louvain algorithm, that is the main subject of this thesis.
+\subsection{Function}
+The function is based on the idea that we did not expect to see a graph structure in a random graph.
+We define as a \textit{null-model} of a graph another one that it's generated randomly keeping some structural proprieties of the original one.
+Comparing the graph with its null model, we can quantify how much is well defined the community structure. Therefore, the modularity function is dependent on the choice of the null model. 
+Given a graph $G = (V,E)$, a partition of nodes $C$ and a function $c(x)$ that assign each nodes $x$ to its community, we define a generic modularity function as :
+\begin{equation}\label{Q1}
+Q = \frac{1}{2|E|} \sum_{i,j \in V}(A_{ij} - P_{ij}) \delta(c(i), c(j))
+\end{equation}
+where $A$ is the  adjacency matrix of $G$, $P$ is the matrix of expected number of edges between nodes in the null model and $\delta$ is an filter function: its yields one if $c(i) == c(j)$, zero otherwise.\\
+In principle, the choice of a null model is arbitrary, but we have to consider carefully the graph properties to keep in the null model because they determine if the comparison is fair or not. 
+For instance, it's possible to choose as a model that keeps only the nodes and edges numbers, assuming that an edge is present with the same probability for each pair of nodes (in this case $P_{ij}$ is constant). 
+For this reason, The standard null model of modularity imposes that the expected degree sequence(after averaging over all possible configurations of the model) matches the actual degree sequence of the graph \cite{fortunato}.
+In this scenario, the probability that two vertices $i$ and $j$ are connected by an edge is equals to the probability to get two stubs (i.e. half-edges) incident to $i$ and $j$.\\
+This probability $p_i$ of piking a stub from the nodes $i$ is $\frac{k_i}{2|E|}$ where $k_i$ is the degree of nodes $i$. The probability that two stub joining is $p_ip_j = \frac{k_ik_j}{4|E|^2}$. Therefore, the expected number $P_ij$ of connections between the nodes $i$ and $j$ is:
+\begin{equation}\label{Pij}
+P_{ij} = 2mp_ip_j = \frac{k_ik_j}{2|E|}
+\end{equation}
+Replacing $P_{ij}$ from (\ref{Pij}) in (\ref{Q1}) we obtain:
+\begin{equation}\label{ModularityQ}
+Q = \frac{1}{2|E|} \sum_{i,j \in V}(A_{ij} - \frac{k_ik_j}{2|E|}) \delta(c(i), c(j))
+\end{equation}
+that is the standard modularity function.
+
+\subsection{Resolution Limit}
+\subsection{Girvan and Newman algorithm}
+\subsection{Modularity Optimization Techniques}
+\subsubsection{Greedy Techniques}
+\subsubsection{Extremal Optimization}
+\subsubsection{Simulated Annealing}
+\subsubsection{Spectral optimization}
+\subsection{Louvain Algorithm}
+\subsubsection{Parallel Implementations}
