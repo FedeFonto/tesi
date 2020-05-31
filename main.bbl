@@ -162,6 +162,142 @@
       \verb https://science.sciencemag.org/content/286/5439/509
       \endverb
     \endentry
+    \entry{Girvan2002Community}{article}{}
+      \name{author}{2}{}{%
+        {{hash=3a7c16fcf03c4a8aacfb75fe018199fd}{%
+           family={Girvan},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4bf3b98e94373b42e6f6e6dfddaf4daa}{%
+           family={Newman},
+           familyi={N\bibinitperiod},
+           given={M.\bibnamedelimi E.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Santa Fe Institute, 1399 Hyde Park Road, Santa Fe, NM 87501, USA. girvan@santafe.edu}%
+      }
+      \list{publisher}{1}{%
+        {National Academy of Sciences}%
+      }
+      \strng{namehash}{301763f43e362529aba7b79f483954b6}
+      \strng{fullhash}{301763f43e362529aba7b79f483954b6}
+      \strng{bibnamehash}{301763f43e362529aba7b79f483954b6}
+      \strng{authorbibnamehash}{301763f43e362529aba7b79f483954b6}
+      \strng{authornamehash}{301763f43e362529aba7b79f483954b6}
+      \strng{authorfullhash}{301763f43e362529aba7b79f483954b6}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1091-6490}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{month}{6}
+      \field{number}{12}
+      \field{title}{{Community structure in social and biological networks}}
+      \field{volume}{99}
+      \field{year}{2002}
+      \field{pages}{7821\bibrangedash 7826}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1073/pnas.122653799
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1073/pnas.122653799
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1073/pnas.122653799
+      \endverb
+    \endentry
+    \entry{Newman_2004}{article}{}
+      \name{author}{2}{}{%
+        {{hash=4bf3b98e94373b42e6f6e6dfddaf4daa}{%
+           family={Newman},
+           familyi={N\bibinitperiod},
+           given={M.\bibnamedelimi E.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=3a7c16fcf03c4a8aacfb75fe018199fd}{%
+           family={Girvan},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society (APS)}%
+      }
+      \strng{namehash}{0f0d8773c379c27ba121ae8ebcc58dfc}
+      \strng{fullhash}{0f0d8773c379c27ba121ae8ebcc58dfc}
+      \strng{bibnamehash}{0f0d8773c379c27ba121ae8ebcc58dfc}
+      \strng{authorbibnamehash}{0f0d8773c379c27ba121ae8ebcc58dfc}
+      \strng{authornamehash}{0f0d8773c379c27ba121ae8ebcc58dfc}
+      \strng{authorfullhash}{0f0d8773c379c27ba121ae8ebcc58dfc}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1550-2376}
+      \field{journaltitle}{Physical Review E}
+      \field{month}{2}
+      \field{number}{2}
+      \field{title}{Finding and evaluating community structure in networks}
+      \field{volume}{69}
+      \field{year}{2004}
+      \verb{doi}
+      \verb 10.1103/physreve.69.026113
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1103/PhysRevE.69.026113
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1103/PhysRevE.69.026113
+      \endverb
+    \endentry
+    \entry{resolution-limit}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1ed82652a051c9132c3b10553eef1426}{%
+           family={Fortunato},
+           familyi={F\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3ba32ab06b203a2a3a1b4fbcfef17181}{%
+           family={Barthelemy},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Proceedings of the National Academy of Sciences}%
+      }
+      \strng{namehash}{17d595207cd8669b7fcc7b6da5f1c706}
+      \strng{fullhash}{17d595207cd8669b7fcc7b6da5f1c706}
+      \strng{bibnamehash}{17d595207cd8669b7fcc7b6da5f1c706}
+      \strng{authorbibnamehash}{17d595207cd8669b7fcc7b6da5f1c706}
+      \strng{authornamehash}{17d595207cd8669b7fcc7b6da5f1c706}
+      \strng{authorfullhash}{17d595207cd8669b7fcc7b6da5f1c706}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1091-6490}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{month}{12}
+      \field{number}{1}
+      \field{title}{Resolution limit in community detection}
+      \field{volume}{104}
+      \field{year}{2006}
+      \field{pages}{36\bibrangedash 41}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1073/pnas.0605965104
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1073/pnas.0605965104
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1073/pnas.0605965104
+      \endverb
+    \endentry
     \entry{metastasis}{article}{}
       \name{author}{4}{}{%
         {{hash=5f5add348ddd7769b5aafb9400c3536c}{%
@@ -215,6 +351,120 @@
       \verb https://doi.org/10.1186/1471-2105-7-2
       \endverb
     \endentry
+    \entry{Blondel_2008}{article}{}
+      \name{author}{4}{}{%
+        {{hash=7c4ebd50451e5b718eb3d5ad6cfbad71}{%
+           family={Blondel},
+           familyi={B\bibinitperiod},
+           given={Vincent\bibnamedelima D},
+           giveni={V\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=6b6e1859f5b4504b6f852c6112880f18}{%
+           family={Guillaume},
+           familyi={G\bibinitperiod},
+           given={Jean-Loup},
+           giveni={J\bibinithyphendelim L\bibinitperiod}}}%
+        {{hash=a0bc3d83c54bda6a078936b2d87d6c9f}{%
+           family={Lambiotte},
+           familyi={L\bibinitperiod},
+           given={Renaud},
+           giveni={R\bibinitperiod}}}%
+        {{hash=78c7291a964edd655c49fdec8099ab3e}{%
+           family={Lefebvre},
+           familyi={L\bibinitperiod},
+           given={Etienne},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{9f3235a1f0c5640347922a746d86f9f3}
+      \strng{fullhash}{6ef1b75c96dd583dc19da75ac0cb7d23}
+      \strng{bibnamehash}{9f3235a1f0c5640347922a746d86f9f3}
+      \strng{authorbibnamehash}{9f3235a1f0c5640347922a746d86f9f3}
+      \strng{authornamehash}{9f3235a1f0c5640347922a746d86f9f3}
+      \strng{authorfullhash}{6ef1b75c96dd583dc19da75ac0cb7d23}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1742-5468}
+      \field{journaltitle}{Journal of Statistical Mechanics: Theory and Experiment}
+      \field{month}{10}
+      \field{number}{10}
+      \field{title}{Fast unfolding of communities in large networks}
+      \field{volume}{2008}
+      \field{year}{2008}
+      \field{pages}{P10008}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1088/1742-5468/2008/10/p10008
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1088/1742-5468/2008/10/P10008
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1088/1742-5468/2008/10/P10008
+      \endverb
+    \endentry
+    \entry{bounds}{article}{}
+      \name{author}{7}{}{%
+        {{hash=392b457d9bac1ed69366176e7857d7e9}{%
+           family={Brandes},
+           familyi={B\bibinitperiod},
+           given={Ulrik},
+           giveni={U\bibinitperiod}}}%
+        {{hash=bc775b0bfe2f5eba2c0d55106a052b55}{%
+           family={Delling},
+           familyi={D\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=c4887e81914cc2d7593a5c1554a717f2}{%
+           family={Gaertler},
+           familyi={G\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=68f05f01fac5964522c25394a7acc647}{%
+           family={Görke},
+           familyi={G\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=98974895b2c54c88c4931187e4fc5789}{%
+           family={Hoefer},
+           familyi={H\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0844eec08444ba8738e7a8b0e252f761}{%
+           family={Nikoloski},
+           familyi={N\bibinitperiod},
+           given={Zoran},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=f2f741491852a3b5c3ad17d40825e753}{%
+           family={Wagner},
+           familyi={W\bibinitperiod},
+           given={Dorothea},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{6938747f5f19c5b477a0cac31794d4dc}
+      \strng{fullhash}{34ed84a4517af545b6f416fef18681fa}
+      \strng{bibnamehash}{6938747f5f19c5b477a0cac31794d4dc}
+      \strng{authorbibnamehash}{6938747f5f19c5b477a0cac31794d4dc}
+      \strng{authornamehash}{6938747f5f19c5b477a0cac31794d4dc}
+      \strng{authorfullhash}{34ed84a4517af545b6f416fef18681fa}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Knowledge and Data Engineering}
+      \field{number}{2}
+      \field{title}{On Modularity Clustering}
+      \field{volume}{20}
+      \field{year}{2008}
+      \field{pages}{172\bibrangedash 188}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1109/TKDE.2007.190689
+      \endverb
+    \endentry
     \entry{fortunato}{article}{}
       \name{author}{1}{}{%
         {{hash=3f057d4175c110c6302b495f38eebcb6}{%
@@ -253,6 +503,75 @@
       \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1016/j.physrep.2009.11.002
+      \endverb
+    \endentry
+    \entry{cuda_manual}{online}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labeltitlesource}{title}
+      \field{title}{Cuda Programming Guide}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html
+      \endverb
+      \verb{url}
+      \verb https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html
+      \endverb
+    \endentry
+    \entry{turing}{online}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labeltitlesource}{title}
+      \field{title}{NVIDIA TURING GPU ARCHITECTURE}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/technologies/turing-architecture/NVIDIA-Turing-Architecture-Whitepaper.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/technologies/turing-architecture/NVIDIA-Turing-Architecture-Whitepaper.pdf
+      \endverb
+    \endentry
+    \entry{gpucpu}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=727938c60e783da449b4314fcefc4b67}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Yifan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=71643ae1bba35773077da02cf1177ed7}{%
+           family={Agostini},
+           familyi={A\bibinitperiod},
+           given={Nicolas\bibnamedelima Bohm},
+           giveni={N\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=8e67094e7ad6e35e55336b096fa20bd7}{%
+           family={Dong},
+           familyi={D\bibinitperiod},
+           given={Shi},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7f42decef9a33d245e91363cb423ad21}{%
+           family={Kaeli},
+           familyi={K\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{d2ab7a2a823cf185790687a6f0a9a924}
+      \strng{fullhash}{b0c7b42b1a5a533632aa859d05ced87b}
+      \strng{bibnamehash}{d2ab7a2a823cf185790687a6f0a9a924}
+      \strng{authorbibnamehash}{d2ab7a2a823cf185790687a6f0a9a924}
+      \strng{authornamehash}{d2ab7a2a823cf185790687a6f0a9a924}
+      \strng{authorfullhash}{b0c7b42b1a5a533632aa859d05ced87b}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.DC}
+      \field{eprinttype}{arXiv}
+      \field{title}{Summarizing CPU and GPU Design Trends with Product Data}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb 1911.11313
       \endverb
     \endentry
   \enddatalist

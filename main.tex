@@ -2,7 +2,8 @@
 
 
 \usepackage{listings}
-\usepackage{caption}
+\usepackage[font={small,stretch=1}, margin=1cm]{caption}
+\usepackage{setspace}
 \usepackage{graphicx}
 \usepackage{geometry}
 \usepackage{changepage}
@@ -10,7 +11,8 @@
 \usepackage{mathtools}
 \usepackage{array}
 \usepackage{url}
-\usepackage{enumitem}
+\usepackage{enumitem}  
+\usepackage{subcaption}
 \usepackage[
 backend=biber,
 style=numeric,
@@ -37,11 +39,11 @@ sorting=ynt
 	\newpage
 	\input{1-introduction/1-introduction.tex}
 	\newpage
+	\input{4-CUDA/4-CUDA.tex}
+	\newpage
 	\input{2-community-detection/2-community-detection.tex}
 	\newpage
-	\input{3-modularity/3-modularity.tex}
-	\newpage
-	\input{4-CUDA/4-CUDA.tex}
+	\input{3-louvain/3-louvain.tex}
 	\newpage
 	\input{5-implementation/5-implementation.tex}
 	\newpage

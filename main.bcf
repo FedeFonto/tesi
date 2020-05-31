@@ -1995,15 +1995,47 @@
     <bcf:datasource type="file" datatype="bibtex">bibliography.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">metastasis</bcf:citekey>
-    <bcf:citekey order="2">Zac77</bcf:citekey>
-    <bcf:citekey order="3">random</bcf:citekey>
-    <bcf:citekey order="4">dsp</bcf:citekey>
-    <bcf:citekey order="5">Barab</bcf:citekey>
-    <bcf:citekey order="6">fortunato</bcf:citekey>
-    <bcf:citekey order="7">fortunato</bcf:citekey>
-    <bcf:citekey order="8">fortunato</bcf:citekey>
-    <bcf:citekey order="9">fortunato</bcf:citekey>
+    <bcf:citekey order="1">cuda_manual</bcf:citekey>
+    <bcf:citekey order="2">cuda_manual</bcf:citekey>
+    <bcf:citekey order="3">gpucpu</bcf:citekey>
+    <bcf:citekey order="4">gpucpu</bcf:citekey>
+    <bcf:citekey order="5">gpucpu</bcf:citekey>
+    <bcf:citekey order="6">turing</bcf:citekey>
+    <bcf:citekey order="7">cuda_manual</bcf:citekey>
+    <bcf:citekey order="8">turing</bcf:citekey>
+    <bcf:citekey order="9">turing</bcf:citekey>
+    <bcf:citekey order="10">cuda_manual</bcf:citekey>
+    <bcf:citekey order="11">cuda_manual</bcf:citekey>
+    <bcf:citekey order="12">cuda_manual</bcf:citekey>
+    <bcf:citekey order="13">cuda_manual</bcf:citekey>
+    <bcf:citekey order="14">cuda_manual</bcf:citekey>
+    <bcf:citekey order="15">cuda_manual</bcf:citekey>
+    <bcf:citekey order="16">cuda_manual</bcf:citekey>
+    <bcf:citekey order="17">cuda_manual</bcf:citekey>
+    <bcf:citekey order="18">metastasis</bcf:citekey>
+    <bcf:citekey order="19">metastasis</bcf:citekey>
+    <bcf:citekey order="20">metastasis</bcf:citekey>
+    <bcf:citekey order="21">Zac77</bcf:citekey>
+    <bcf:citekey order="22">Zac77</bcf:citekey>
+    <bcf:citekey order="23">Zac77</bcf:citekey>
+    <bcf:citekey order="24">random</bcf:citekey>
+    <bcf:citekey order="25">dsp</bcf:citekey>
+    <bcf:citekey order="26">Barab</bcf:citekey>
+    <bcf:citekey order="27">fortunato</bcf:citekey>
+    <bcf:citekey order="28">fortunato</bcf:citekey>
+    <bcf:citekey order="29">fortunato</bcf:citekey>
+    <bcf:citekey order="30">fortunato</bcf:citekey>
+    <bcf:citekey order="31">bounds</bcf:citekey>
+    <bcf:citekey order="32">resolution-limit</bcf:citekey>
+    <bcf:citekey order="33">fortunato</bcf:citekey>
+    <bcf:citekey order="34">Girvan2002Community</bcf:citekey>
+    <bcf:citekey order="35">Newman_2004</bcf:citekey>
+    <bcf:citekey order="36">Newman_2004</bcf:citekey>
+    <bcf:citekey order="37">Newman_2004</bcf:citekey>
+    <bcf:citekey order="38">Newman_2004</bcf:citekey>
+    <bcf:citekey order="39">Newman_2004</bcf:citekey>
+    <bcf:citekey order="40">Newman_2004</bcf:citekey>
+    <bcf:citekey order="41">Blondel_2008</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="ynt">
