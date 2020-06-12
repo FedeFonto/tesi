@@ -64,8 +64,61 @@ Many other variants of that definition (but based on the same principle) were pr
 Other alternative measures consider the number of independent paths between nodes, i.e. path that does not share any common edges, or they are based on random walk on a graph: for example, the average number of steps needed to reach one vertex from another by a random walker.  
 
 \subsection{Community Detection Algorithms}
-We now present some techniques used in the field of community detection: AGGIUNGERE METODI. Moreover, the Girvan and Newman algorithm is presented later on: this is because this method firstly introduced the modularity function and it is presented separately. The goal of this chapter is to give a useful overview in order to get the differences with the Modularity optimization and empathize the motivations that make the Louvain algorithm one of the most used nowadays. For this reason, all the methods that are presented in this thesis find non-overlapping community, as the Louvain methods. For the sake of completeness, we remark that in Fortunato's report \cite{fortunato}, that was mainly used to write this chapter, is also present an analysis of those overlapping algorithms.
-
+A partition is a division of the graph in clusters, such that each vertex belongs to exactly one cluster. 
+The partition of possible partitions of a graph $G$ with $n$ vertices grows faster than exponentially with $n$,  thus making it impossible to evaluate all the partitions of a graph \cite{fortunato}. For these reasons, many techniques were introduced to find the most significant ones.
+We now present an introduction to some classical class of techniques used in the field of community detection: Partitional clustering, Graph partitioning, Spectral clustering, Hierarchical clustering.  Moreover, the Girvan and Newman algorithm is presented later on: even if this method is a Hierarchical algorithm, this method firstly introduced the modularity function and it is presented separately. The goal of this chapter is to give a useful overview in order to get the differences with the Modularity optimization and empathize the motivations that led to the definition of the Louvain algorithm, one of the most used nowadays, especially for huge graphs. For this reason, all the methods that are presented in this thesis find a partition, as the Louvain methods. 
+For the sake of completeness, we remark that in Fortunato's report \cite{fortunato}, that was mainly used to write this chapter, is presented an analysis of algorithms that found also overlapping communities (covers). 
+\subsubsection{Partitional clustering}
+Partitional clustering is a class of methods that find clusters from data points. The algorithms in this class embed the graph in a metric space as seen in chapter \ref{local-def}, and then calculate the distance between these new points.  The goal is to separate the points in $k$ clusters minimizing the distance between points and to the assigned centroids (i.e. the arithmetic mean position of all the points in the cluster). The number of clusters $k$ is given as input. The most famous technique is k-means clustering.
+The objective function to minimize is the following:
+\begin{equation}
+\sum^k_{i=1} \sum_{x_j\in C_i} || x_j - c_i ||^2 
+\end{equation}
+where $C_i$ is the $i$-th cluster and $c_i$ is its centroid. This function quantifies the intracluster distance. 
+At the start, the $k$ centroids are set far distance from each other. Then, each vertex is assigned to cluster with the nearest centroid and the centroid is recalculated.  Even if the method doesn't find an optimal solution and the solution is strongly dependent on the initial setup of the centroids, this method remains popular due to the quick convergence that allows it to analyze big graphs.
+However, setting the apriori number of cluster $k$ is not simple to estimate that number,
+especially in a large graph, and for this reason, it is often preferred algorithms that can automatically derive it. Moreover, the embedding of the graph in the Euclidean Space may be tricky and not reliable for some graphs.
+\subsubsection{Graph partitioning} 
+Given a graph $G(V, E)$ and a number $g$ of clusters, the problem of graph partitioning consists of creating a partition of nodes composed by $g$ subset such that it minimizes the edges that lying between the clusters. To archive this goal, many algorithms performs a bisection of the graph, even for partitions with more than two clusters, where the bisection is iterated.  One of the earliest and famous algorithms is the Kernighan–Lin algorithm. This algorithm performs an optimization of the function $Q = link_{in} - link_{between}$, where $ link_{in}$ is the number of edges inside the subsets and $link_{between}$ is the number of edges lying between them. The algorithm starts from an initial partition (randomized or suggested by the graph), and the algorithm performs a swapping between clusters for a fixed number of nodes pair to increase the value of $Q$. 
+To avoid local maxima, some swaps that decrease $Q$ are kept. 
+With some optimizations, the complexity of this algorithm is $O(n^2)$ where $n$ is the number of nodes.\\
+Other techniques are based on the max-flow min-cut theorem by Ford and Fulkerson \cite{ford} and the minimization of cut-affine measures, like the normalize cut:
+\begin{equation}
+\Phi_N(C) = \frac{c(C, V/C)}{k_c}
+\end{equation}
+where $C$ is a subset of nodes and $k_c$ is the total degree of $C$. \\
+Like the previous class, specifying the number of clusters is the greatest limit of this class of algorithm. In additions, iterative bisecting can lead to not reliable clusters, because the sub-clusters are made breaking the previous ones:  in this way, the new subsets have vertices only from one of the "parent" cluster.  
+\subsubsection{Spectral clustering}
+Given a set of $n$ object $x_1 ,x_2, ..., x_n$ and the matrix $S$ of pairwise similarity function $s(x_1, x_2)$ such that $s$ is symmetric and non negative, we define as spectral clustering all methods that clustering all this object using the eigenvector derived from the matrix $S$.
+In particular, this transformation makes a change from the reference system of the object to another whose coordinates are elements of eigenvectors. This transformation is made to enhance the proprieties of the initial data.  After that, we can cluster the data using other techniques as $k$-means and obtain a better result. The Laplacian matrix is the most used in spectral clustering. Given a graph $G$ and its associated adjacently matrix $A$, we define the Laplacian matrix $L$ of the graph $G$ as:
+\begin{equation}
+L = D - A 
+\end{equation}
+where $D$ is the degree matrix, a diagonal matrix which contains information about the degree of each vertex. This matrix is used due to nice propriety: if the graph has $k$ connected components, the Laplacian of the graph will have $k$ zero eigenvalues.
+In that case, the matrix can be organized in a way that displays $l$ square blocks along
+the diagonal. When is it in this block-diagonal form, each block is at his turn a Laplacian matrix of one of the subcomponent.
+There are in this situation $k$ degenerate eigenvectors with equal non-vanishing components in correspondence with the vertices of a block and zero otherwise. 
+Considering the $n\times k$ matrix where $n$ is the number of nodes of $G$ and the columns of this matrix are the $k$ eigenvectors, we can see that vertices in the same connected component of the graph coincide.
+If the graph is connected but the connections between the $k$ subgraph are weak, only one eigenvalue is zero. By the way, However, the lowest $k - 1$ non-vanishing eigenvalues are still close to zero and the vertex vector of the first $k$ eigenvectors still identify the clusters.\\
+An application of these techniques is the spectral bisection methods: this algorithm combines ideas from spectral clustering and graph partitioning. 
+Given the graph $G$ with $n$ nodes, the cut size $R$ of the bipartition of the graph is:
+\begin{equation}\label{spec_bi_pa}
+R = \frac{1}{4} s^TLs
+\end{equation} 
+where $L$ is the Laplacian matrix and $s$ is the $n$-vector that represents the affiliation of the nodes to a group (if the node $i$ belongs to the first group, the $i$-th entry of $s$ will be $1$, $-1$ otherwise).
+$s$ can be writtens as $s= \sum_{i=0}^n a_i v_i$ where $v_i$ is the $i$-th eigenvector of the Laplacian.
+If $s$ is normalized, we can write the equation (\ref{spec_bi_pa}) as the following:
+\begin{equation}\label{spec_bi_pa}
+R = \sum_{i=0}^n a_i^2 \lambda_i
+\end{equation} 
+where $\lambda_i$ is the eigenvalue corresponding to $v_i$.
+From this, choosing the $s$ parallel to the second-lowest eigenvector $\lambda_2$ we have a good approximation of the minimum because this would reduce the sum to $\lambda_2$. We remark that we use the second one because the first one is equal to zero. To cluster the data in the vector $s$, we match the signs of the components of $v$. \\
+The exact computation of the all eigenvalues required a time $O(n^3)$, a too high complexity for big graph, but exist some techniques that allow calculating approximate values faster \cite{fortunato}.
+ 
+\subsubsection{Hierarchical clustering}
+The possible partitions of a graph can be very different in scale: some cluster at its turn may show an internal community structure. In that case, there is a hierarchy between partitions. The most common ways to represent this kind of structure is to draw a dendrogram, i.e. a diagram representing a tree. The hierarchical clustering algorithms build an entire dendrogram starting or from the bottom (agglomerative algorithms), or from the top (divisive algorithms) using a similarity function to cluster. In the first type of algorithms, each node starts in its communities and the clusters are iteratively merged if the similarity score exceeds a threshold. By the other hands, a divisive algorithm overturns the starting point: at the start, all nodes belong to one singleton community and the clusters are iteratively split. An example of this type of algorithm, the Girvan and Newman algorithm, will be presented later on this thesis.  
+Respect to the previous, the algorithms that belong to this class doesn't need the number 
+of clusters as input, but there is the problem of discriminating between the obtained partitions.  The Modularity Function was introduced to overcome this problem. Moreover, as we see in the Girvan and Newman algorithm, building the entire hierarchies using similarity metrics required a lot of computations: for these reasons the complexity of this class of algorithms tends to become much heavier if the calculation of the chosen similarity measure is costly \cite{fortunato}.
 
 \subsection{Modularity Optimization}
 Historically, the modularity function $Q$ was introduced as a stop criterion for the Girvan and Newman algorithm in 2002. This is a quality function, i.e. a function that allows distinguishing from a "good" cluster and a "bad" one. The function assigns to a partition a score that is used to compare partitions. This is not a trivial goal, because define if a partition is better than another is an ill-posed question: the answer may depend on the particular concept of community that it is adopted. Nevertheless, this sometimes is necessary, for example in the case of hierarchical clustering, where it's necessary to identify the best partition in the hierarchies. A simple example of this kind of function are the sum of the difference between internal degree $k_v^{int}$ and the external degree $k_v^{ext}$ [\ref{local-def}]. \\
@@ -104,11 +157,11 @@ There is a well-known limit of the modularity function, identified by Fortunato 
 P_{AB} = k_A k_B /2m 
 \end{equation}
 where $k_c$ is the total degree of $c$.
-We can compute from (\ref{ModularityExt}) the difference $\Delta Q_{AB}$ that affecting the modularity when we consider $c_A$ and $c_B$ in a partition where they are two different cluster respect to the partition where they are merged in one cluster $c_AB$:
+We can compute from (\ref{ModularityC}) the difference $\Delta Q_{AB}$ that affecting the modularity when we consider $c_A$ and $c_B$ in a partition where they are two different cluster respect to the partition where they are merged in one cluster $c_{AB}$:
 \begin{equation}\label{DQAB}
 \Delta Q_{AB} = \frac{l_{AB}}{|E|}  - \frac{k_Ak_B}{2|E|}
 \end{equation}
-where $l_AB$ is the sum of edges that connect nodes that belongs to $A$ to nodes that belongs to $B$.
+where $l_{AB}$ is the sum of edges that connect nodes that belongs to $A$ to nodes that belongs to $B$.
 Now considering the case $l_{AB} = 1$: there is only one edge that connects these two clusters. Therefore we expect that we obtain a greater modularity score keeping these two clusters separate respect to merging them. Instead, from (\ref{DQAB}) we have that the modularity increase if  $\frac{k_Ak_B}{2|E|} < 1$. For the sake of simplicity, we assume that $k_A = k_B = k$. We obtain that if $k < \sqrt{2|E|}$, the modularity is greater if we merge the communities. From this it follows that if the communities are sufficiently small in degree, the expected number is smaller than one: in this case if there is only one edge between the two communities, we obtain a better result merging them. The result of this observation is that the modularity optimization has a resolution limit that prevents it to detect communities that are smaller respect the graph as a whole.
 This problem has many implications: the real networks graph have a community structure composed by communities very different in size, so some of this community may be wrongly merged. Fortunato identifies as week point the assumption that in the null model each vertex can interact with every other vertex \cite{fortunato}. Some solutions are proposed, as tunable parameters that allow avoiding the problem or also algorithm that eliminate artificial mergers. By the way, in many real cases, the modularity-based algorithms still obtain a very good result and permit to analyze quickly very large graph. For those reasons, the algorithms of this class of algorithm remain the most used, but it's important to remark their limits.
 
@@ -129,10 +182,31 @@ If a voltage difference is applied between any two vertices, each edge carries s
 The current flows in the network are governed by Kirchhoff’s equations and the calculations are performed on each edge in the graph.
 This calculation has a complexity $O(n^3)$ on a sparse graph \cite{Newman_2004}. 
 The last one is the expected frequency of the passage of a random walker on the edges. The calculation requires the inversion of the adjacency matrix followed by the calculus of the averaging flows for all pairs of nodes. The complexity is $O(n^3)$ on a sparse graph \cite{Newman_2004}. 
-The first definition is the most used for its speed ($O(n^2) < O(n^3)$ and it is also shown that in practical application this edge betweenness gives better results \cite{Newman_2004}. The authors also show that the recalculation step is essential to detect correctly communities: this means that we have to recalculate the betweenness every time an edge will be removed, raising the complexity of the algorithm to $O(n^3)$ on a sparse graph. The complexity is the strongest limit of this algorithm, which, however, was the first one to introduce the modularity and has many ideas that were used later on.\\
-
+The first definition is the most used for its speed ($O(n^2) < O(n^3)$ and it is also shown that in practical application this edge betweenness gives better results \cite{Newman_2004}. The authors also show that the recalculation step is essential to detect correctly communities: this means that we have to recalculate the betweenness every time an edge will be removed, raising the complexity of the algorithm to $O(n^3)$ on a sparse graph. The complexity is the strongest limit of this algorithm, which, however, was the first one to introduce the modularity and has many ideas that were used later on.
 \subsection{Modularity Optimization Techniques}
-\subsubsection{Greedy Techniques}
-\subsubsection{Extremal Optimization}
-\subsubsection{Simulated Annealing}
-\subsubsection{Spectral optimization}
+After the introduction of the modularity function $Q$, many algorithm were presented in the literature that have as goal to optimize the modularity function $Q$. In this chapter we present the Newman's greedy algorithm that was the first one, in order to make a comparison with the Louvain algorithm that is also greedy. This algorithm also introduce for the first time the concept of $\Delta Q$, that will be expanded and used in the Louvain method. Moreover, we present also some other class of techniques that are used in modularity optimization like extremal optimization, simulated annealing and spectral clustering.
+\subsubsection{Greedy Method of Newman}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{0-resources/zachary}
+	\caption{Dendrogram of the communities found by Newman algorithm in Zachary karate club network. This image is reprinted from \cite{Newman_2004}.}
+	\label{fig:dedro_zachary}
+\end{figure}
+The first modularity optimization algorithm is presented by Newman \cite{Newman_2004}.
+and it is an agglomerative hierarchies methods. Given a graph $G(V,E)$ where $n$ are the number of nodes and $m$ the number of edges, the algorithm starts with all nodes assigned to each own cluster and no edges between them. The first step of the algorithm is to pick from the set of vertices the vertices that give the maximum increase (or minimal decrease) of the modularity respect to the actual configuration. This value is indicated as $\Delta Q = Q_{now} - Q_{old}$ The modularity will be calculated on the full graph and not on the "cluster" graph. Then we add the edge to the graph. If the edges connect two sets of unconnected edges, it delivers a new partition and reducing by one the number of the partitions. So, the algorithm find $n$ different partitions of the graph (Figure \ref{fig:dedro_zachary}). 
+We make some consideration of this procedure:
+\begin{itemize}
+\item If we add some edges that don't merge any partitions (i.e. it is internal), the modularity doesn't change.
+\item Considering this, we have to calculate the modularity difference $\Delta Q$ only when we merge different partitions and so this operation is executed $n$ times.
+\item Computing $Q$ requires a time of $O(m)$ that became $O(n)$ on a sparse graph.
+\end{itemize}
+For those reasons, the complexity of this algorithm is $O(n^2)$ on a sparse graph.
+Many improvements of this algorithm were proposed later (like the Clauset et. al versions \cite{Clauset_2004} that using a max-heap to reduce the complexity to $O(n \log_2(n))$) but the complexity of the algorithm remains the biggest limit of it, even if this algorithm still allows to analyze large graphs.
+\subsection{Other techniques}
+The previous and Louvain algorithms are the two most famous greedy algorithm of community optimization, but other optimization strategies were proposed in the literature. A class of techniques are based on the concept of simulated annealing, i.e. an exploration of the space of the possible configuration looking for the maximum of $Q$. 
+Transitions between states are performed combining two types of "move": the first one assign a vertex to a cluster chosen randomly; the second one merge or split communities \cite{Guimer__2005}. These methods reach a very high score of modularity, near to the maximum. In opposite, it's very slow \cite{fortunato}. \\
+To overcome this time problem, a heuristic denominated extremal optimization (EO) was proposed to perform an exploration of the space quickly. We define as fitness function $F$ of the vertex $x$ is the local modularity of $x$ divide by its degree. Starting from a random equal size bi-partitions of nodes, at each iteration a node was picked with a probability proportional to the score of the fitness measure is assigned to the other cluster. When there is no more improvement in modularity, the algorithm was called recursively on the two clusters. With a total complexity of $O(n^2 \log(n))$, this algorithm is a good trade-off between accuracy and speed \cite{eo}.\\ Finally, in literature one presented the idea of combining modularity optimization with the spectral clustering. Given the adjacency matrix $A$ of the graph $G$, we define the matrix $B$ whose elements are:
+\begin{equation}
+B_{ij} = A_{ij} - \frac{k_ik_j}{2|V|}
+\end{equation}
+Modularity can be optimized by using spectral bisection on the matrix $B$ \cite{fortunato}. This algorithm has a total complexity of $O(n^2 \log(n))$.

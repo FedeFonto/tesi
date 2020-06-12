@@ -1,22 +1,27 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
-[1] Config.pm:307> INFO - Logfile is 'main.blg'
-[79] biber-MSWIN64:315> INFO - === 
-[159] Biber.pm:371> INFO - Reading 'main.bcf'
-[406] Biber.pm:889> INFO - Found 14 citekeys in bib section 0
-[444] Biber.pm:4093> INFO - Processing section 0
-[482] Biber.pm:4254> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
-[491] bibtex.pm:1523> INFO - LaTeX decoding ...
-[566] bibtex.pm:1340> INFO - Found BibTeX data source 'bibliography.bib'
-[609] Utils.pm:193> WARN - month field 'Jan' in entry 'metastasis' is not an integer - this will probably not sort properly.
-[629] Utils.pm:193> WARN - month field 'Dec' in entry 'random' is not an integer - this will probably not sort properly.
-[660] Utils.pm:193> WARN - month field 'Feb' in entry 'fortunato' is not an integer - this will probably not sort properly.
-[698] Utils.pm:193> WARN - month field 'Dec' in entry 'resolution-limit' is not an integer - this will probably not sort properly.
-[721] Utils.pm:193> WARN - month field 'Feb' in entry 'Newman_2004' is not an integer - this will probably not sort properly.
-[739] Utils.pm:193> WARN - month field 'Oct' in entry 'Blondel_2008' is not an integer - this will probably not sort properly.
-[810] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[811] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[811] Biber.pm:3921> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
-[811] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
-[861] bbl.pm:636> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[878] bbl.pm:739> INFO - Output to main.bbl
-[895] Biber.pm:110> INFO - WARNINGS: 6
+[0] Config.pm:307> INFO - Logfile is 'main.blg'
+[37] biber-MSWIN64:315> INFO - === 
+[98] Biber.pm:371> INFO - Reading 'main.bcf'
+[205] Biber.pm:889> INFO - Found 27 citekeys in bib section 0
+[218] Biber.pm:4093> INFO - Processing section 0
+[230] Biber.pm:4254> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[243] bibtex.pm:1523> INFO - LaTeX decoding ...
+[306] bibtex.pm:1340> INFO - Found BibTeX data source 'bibliography.bib'
+[309] Utils.pm:193> WARN - Duplicate entry key: 'Newman_2004' in file 'bibliography.bib', skipping ...
+[328] Utils.pm:193> WARN - month field 'Jan' in entry 'metastasis' is not an integer - this will probably not sort properly.
+[336] Utils.pm:193> WARN - month field 'Dec' in entry 'random' is not an integer - this will probably not sort properly.
+[346] Utils.pm:193> WARN - month field 'Feb' in entry 'fortunato' is not an integer - this will probably not sort properly.
+[362] Utils.pm:193> WARN - month field 'Dec' in entry 'resolution-limit' is not an integer - this will probably not sort properly.
+[371] Utils.pm:193> WARN - month field 'Feb' in entry 'Newman_2004' is not an integer - this will probably not sort properly.
+[376] Utils.pm:193> WARN - month field 'Dec' in entry 'Clauset_2004' is not an integer - this will probably not sort properly.
+[380] Utils.pm:193> WARN - month field 'Feb' in entry 'Guimer__2005' is not an integer - this will probably not sort properly.
+[384] Utils.pm:193> WARN - month field 'Aug' in entry 'eo' is not an integer - this will probably not sort properly.
+[390] Utils.pm:193> WARN - month field 'Oct' in entry 'Blondel_2008' is not an integer - this will probably not sort properly.
+[399] Utils.pm:193> WARN - month field 'Sep' in entry 'rand' is not an integer - this will probably not sort properly.
+[471] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[471] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[471] Biber.pm:3921> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
+[472] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
+[501] bbl.pm:636> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[511] bbl.pm:739> INFO - Output to main.bbl
+[519] Biber.pm:110> INFO - WARNINGS: 11

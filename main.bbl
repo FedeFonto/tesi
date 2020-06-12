@@ -19,6 +19,28 @@
 
 \refsection{0}
   \datalist[entry]{ynt/global//global/global}
+    \entry{ford}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a4862917c7673354b49bc43c16d5aeae}{%
+           family={L.R.\bibnamedelimi Ford},
+           familyi={L\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={D.R.\bibnamedelimi Fulkerson},
+           giveni={D\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{a4862917c7673354b49bc43c16d5aeae}
+      \strng{fullhash}{a4862917c7673354b49bc43c16d5aeae}
+      \strng{bibnamehash}{a4862917c7673354b49bc43c16d5aeae}
+      \strng{authorbibnamehash}{a4862917c7673354b49bc43c16d5aeae}
+      \strng{authornamehash}{a4862917c7673354b49bc43c16d5aeae}
+      \strng{authorfullhash}{a4862917c7673354b49bc43c16d5aeae}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Canad. J. Math. 8}
+      \field{title}{Maximal Flow Through a Network}
+      \field{year}{1956}
+    \endentry
     \entry{random}{article}{}
       \name{author}{1}{}{%
         {{hash=34988b2875db74607f89a2a58f877bf7}{%
@@ -210,6 +232,54 @@
       \verb http://dx.doi.org/10.1073/pnas.122653799
       \endverb
     \endentry
+    \entry{Clauset_2004}{article}{}
+      \name{author}{3}{}{%
+        {{hash=42b12665bdf3534fb7bb76c73fc17ebe}{%
+           family={Clauset},
+           familyi={C\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4bf3b98e94373b42e6f6e6dfddaf4daa}{%
+           family={Newman},
+           familyi={N\bibinitperiod},
+           given={M.\bibnamedelimi E.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=204e08828e2dc50ada9b8e498f43a1e2}{%
+           family={Moore},
+           familyi={M\bibinitperiod},
+           given={Cristopher},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society (APS)}%
+      }
+      \strng{namehash}{607421c0e4eb9bb940777f04f396f69c}
+      \strng{fullhash}{607421c0e4eb9bb940777f04f396f69c}
+      \strng{bibnamehash}{607421c0e4eb9bb940777f04f396f69c}
+      \strng{authorbibnamehash}{607421c0e4eb9bb940777f04f396f69c}
+      \strng{authornamehash}{607421c0e4eb9bb940777f04f396f69c}
+      \strng{authorfullhash}{607421c0e4eb9bb940777f04f396f69c}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1550-2376}
+      \field{journaltitle}{Physical Review E}
+      \field{month}{12}
+      \field{number}{6}
+      \field{title}{Finding community structure in very large networks}
+      \field{volume}{70}
+      \field{year}{2004}
+      \verb{doi}
+      \verb 10.1103/physreve.70.066111
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1103/PhysRevE.70.066111
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1103/PhysRevE.70.066111
+      \endverb
+    \endentry
     \entry{Newman_2004}{article}{}
       \name{author}{2}{}{%
         {{hash=4bf3b98e94373b42e6f6e6dfddaf4daa}{%
@@ -251,6 +321,96 @@
       \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1103/PhysRevE.69.026113
+      \endverb
+    \endentry
+    \entry{eo}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7388bba795bf475b8bcbdfb945695833}{%
+           family={Duch},
+           familyi={D\bibinitperiod},
+           given={Jordi},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6a357114624f649b1b1dedd6e3c92cbd}{%
+           family={Arenas},
+           familyi={A\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{0bc048d8416ff97982db1d2c63b9a481}
+      \strng{fullhash}{0bc048d8416ff97982db1d2c63b9a481}
+      \strng{bibnamehash}{0bc048d8416ff97982db1d2c63b9a481}
+      \strng{authorbibnamehash}{0bc048d8416ff97982db1d2c63b9a481}
+      \strng{authornamehash}{0bc048d8416ff97982db1d2c63b9a481}
+      \strng{authorfullhash}{0bc048d8416ff97982db1d2c63b9a481}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{2}
+      \field{journaltitle}{Phys. Rev. E}
+      \field{month}{8}
+      \field{title}{Community detection in complex networks using extremal optimization}
+      \field{volume}{72}
+      \field{year}{2005}
+      \field{pages}{027104}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevE.72.027104
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevE.72.027104
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevE.72.027104
+      \endverb
+    \endentry
+    \entry{Guimer__2005}{article}{}
+      \name{author}{2}{}{%
+        {{hash=897115e698c5a4a7798ce2d421e149b0}{%
+           family={Guimerà},
+           familyi={G\bibinitperiod},
+           given={Roger},
+           giveni={R\bibinitperiod}}}%
+        {{hash=2913ea44403e30eed60356ec1a4cd532}{%
+           family={Nunes\bibnamedelima Amaral},
+           familyi={N\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Luís\bibnamedelima A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media LLC}%
+      }
+      \strng{namehash}{d7b6130a085db22e3ad8d2cb38628155}
+      \strng{fullhash}{d7b6130a085db22e3ad8d2cb38628155}
+      \strng{bibnamehash}{d7b6130a085db22e3ad8d2cb38628155}
+      \strng{authorbibnamehash}{d7b6130a085db22e3ad8d2cb38628155}
+      \strng{authornamehash}{d7b6130a085db22e3ad8d2cb38628155}
+      \strng{authorfullhash}{d7b6130a085db22e3ad8d2cb38628155}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1476-4687}
+      \field{journaltitle}{Nature}
+      \field{month}{2}
+      \field{number}{7028}
+      \field{title}{Functional cartography of complex metabolic networks}
+      \field{volume}{433}
+      \field{year}{2005}
+      \field{pages}{895\bibrangedash 900}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1038/nature03288
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1038/nature03288
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1038/nature03288
       \endverb
     \endentry
     \entry{resolution-limit}{article}{}
@@ -504,6 +664,351 @@
       \verb{url}
       \verb http://dx.doi.org/10.1016/j.physrep.2009.11.002
       \endverb
+    \endentry
+    \entry{cheong2013hierarchical}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=aa8eead4507deb0fb8743a31dc7c10a3}{%
+           family={Cheong},
+           familyi={C\bibinitperiod},
+           given={Chun\bibnamedelima Yew},
+           giveni={C\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=764cc2672600ce64d1747c4bf6a46a24}{%
+           family={Huynh},
+           familyi={H\bibinitperiod},
+           given={Huynh\bibnamedelima Phung},
+           giveni={H\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=cac8ebdbf2f8a8f2b7f49f6e737c2649}{%
+           family={Lo},
+           familyi={L\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ea4c9978f2f646e61f33f9e1f4a79ef8}{%
+           family={Goh},
+           familyi={G\bibinitperiod},
+           given={Rick\bibnamedelimb Siow\bibnamedelima Mong},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{ff4ab766b0bebf6847ee1ca51c59c69f}
+      \strng{fullhash}{d9c6399fd3b1307f37123c51773687c6}
+      \strng{bibnamehash}{ff4ab766b0bebf6847ee1ca51c59c69f}
+      \strng{authorbibnamehash}{ff4ab766b0bebf6847ee1ca51c59c69f}
+      \strng{authornamehash}{ff4ab766b0bebf6847ee1ca51c59c69f}
+      \strng{authorfullhash}{d9c6399fd3b1307f37123c51773687c6}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{European Conference on Parallel Processing}
+      \field{title}{Hierarchical parallel algorithm for modularity-based community detection using GPUs}
+      \field{year}{2013}
+      \field{pages}{775\bibrangedash 787}
+      \range{pages}{13}
+    \endentry
+    \entry{wickramaarachchi2014fast}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=b022fd84aa922b80e070491f0c182b8c}{%
+           family={Wickramaarachchi},
+           familyi={W\bibinitperiod},
+           given={Charith},
+           giveni={C\bibinitperiod}}}%
+        {{hash=ecc39c254a907c25d9aa9f62becd750e}{%
+           family={Frincu},
+           familyi={F\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1f1ea979e1e79f74ab926bbdab9eb2e4}{%
+           family={Small},
+           familyi={S\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+        {{hash=443b8ebe8c91ffd28ddbebb4928cb907}{%
+           family={Prasanna},
+           familyi={P\bibinitperiod},
+           given={Viktor\bibnamedelima K},
+           giveni={V\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{2ceef8561496c3dcfc59ae855a2531d0}
+      \strng{fullhash}{0cff53315c8d18a48633c336884a840b}
+      \strng{bibnamehash}{2ceef8561496c3dcfc59ae855a2531d0}
+      \strng{authorbibnamehash}{2ceef8561496c3dcfc59ae855a2531d0}
+      \strng{authornamehash}{2ceef8561496c3dcfc59ae855a2531d0}
+      \strng{authorfullhash}{0cff53315c8d18a48633c336884a840b}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2014 IEEE High Performance Extreme Computing Conference (HPEC)}
+      \field{title}{Fast parallel algorithm for unfolding of communities in large graphs}
+      \field{year}{2014}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+    \endentry
+    \entry{lu2015parallel}{article}{}
+      \name{author}{3}{}{%
+        {{hash=b61c7b6eeaa58572d109f9c87e5a61b0}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c1c353099ba8159299511ad1ce163dcb}{%
+           family={Halappanavar},
+           familyi={H\bibinitperiod},
+           given={Mahantesh},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6019de79ff3a0c0a0284d54094dc3e5c}{%
+           family={Kalyanaraman},
+           familyi={K\bibinitperiod},
+           given={Ananth},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{397740ae110f9a9caed4e1c37e7e429f}
+      \strng{fullhash}{397740ae110f9a9caed4e1c37e7e429f}
+      \strng{bibnamehash}{397740ae110f9a9caed4e1c37e7e429f}
+      \strng{authorbibnamehash}{397740ae110f9a9caed4e1c37e7e429f}
+      \strng{authornamehash}{397740ae110f9a9caed4e1c37e7e429f}
+      \strng{authorfullhash}{397740ae110f9a9caed4e1c37e7e429f}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Parallel Computing}
+      \field{title}{Parallel heuristics for scalable community detection}
+      \field{volume}{47}
+      \field{year}{2015}
+      \field{pages}{19\bibrangedash 37}
+      \range{pages}{19}
+    \endentry
+    \entry{que2015scalable}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=c71157a603eab7d04ab42241c5000036}{%
+           family={Que},
+           familyi={Q\bibinitperiod},
+           given={Xinyu},
+           giveni={X\bibinitperiod}}}%
+        {{hash=5c0d66ea76a37204d48180137737bc84}{%
+           family={Checconi},
+           familyi={C\bibinitperiod},
+           given={Fabio},
+           giveni={F\bibinitperiod}}}%
+        {{hash=946e2e9ea9e9847c7b80d9fe789ff067}{%
+           family={Petrini},
+           familyi={P\bibinitperiod},
+           given={Fabrizio},
+           giveni={F\bibinitperiod}}}%
+        {{hash=cecbd68161cd950ecade4b0c9935df56}{%
+           family={Gunnels},
+           familyi={G\bibinitperiod},
+           given={John\bibnamedelima A},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{f47685149ff5f6b4bfc41ba047497e99}
+      \strng{fullhash}{09cf0bf188fb4a6ab329f10b97f8292c}
+      \strng{bibnamehash}{f47685149ff5f6b4bfc41ba047497e99}
+      \strng{authorbibnamehash}{f47685149ff5f6b4bfc41ba047497e99}
+      \strng{authornamehash}{f47685149ff5f6b4bfc41ba047497e99}
+      \strng{authorfullhash}{09cf0bf188fb4a6ab329f10b97f8292c}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2015 IEEE International Parallel and Distributed Processing Symposium}
+      \field{title}{Scalable community detection with the louvain algorithm}
+      \field{year}{2015}
+      \field{pages}{28\bibrangedash 37}
+      \range{pages}{10}
+    \endentry
+    \entry{staudt2015engineering}{article}{}
+      \name{author}{2}{}{%
+        {{hash=700769d3af37ec6eead15917048768bc}{%
+           family={Staudt},
+           familyi={S\bibinitperiod},
+           given={Christian\bibnamedelima L},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=4a374125915b3960914c8d26d052ff0b}{%
+           family={Meyerhenke},
+           familyi={M\bibinitperiod},
+           given={Henning},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{6d8f845ac7af6ccc0d77a91bdd26a1e3}
+      \strng{fullhash}{6d8f845ac7af6ccc0d77a91bdd26a1e3}
+      \strng{bibnamehash}{6d8f845ac7af6ccc0d77a91bdd26a1e3}
+      \strng{authorbibnamehash}{6d8f845ac7af6ccc0d77a91bdd26a1e3}
+      \strng{authornamehash}{6d8f845ac7af6ccc0d77a91bdd26a1e3}
+      \strng{authorfullhash}{6d8f845ac7af6ccc0d77a91bdd26a1e3}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Parallel and Distributed Systems}
+      \field{number}{1}
+      \field{title}{Engineering parallel algorithms for community detection in massive networks}
+      \field{volume}{27}
+      \field{year}{2015}
+      \field{pages}{171\bibrangedash 184}
+      \range{pages}{14}
+    \endentry
+    \entry{rand}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e1867a5a25e8c011aa1397fe1b29d30e}{%
+           family={Traag},
+           familyi={T\bibinitperiod},
+           given={V.\bibnamedelimi A.},
+           giveni={V\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{e1867a5a25e8c011aa1397fe1b29d30e}
+      \strng{fullhash}{e1867a5a25e8c011aa1397fe1b29d30e}
+      \strng{bibnamehash}{e1867a5a25e8c011aa1397fe1b29d30e}
+      \strng{authorbibnamehash}{e1867a5a25e8c011aa1397fe1b29d30e}
+      \strng{authornamehash}{e1867a5a25e8c011aa1397fe1b29d30e}
+      \strng{authorfullhash}{e1867a5a25e8c011aa1397fe1b29d30e}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{3}
+      \field{journaltitle}{Phys. Rev. E}
+      \field{month}{9}
+      \field{title}{Faster unfolding of communities: Speeding up the Louvain algorithm}
+      \field{volume}{92}
+      \field{year}{2015}
+      \field{pages}{032801}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevE.92.032801
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevE.92.032801
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevE.92.032801
+      \endverb
+    \endentry
+    \entry{forster2016louvain}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=3b1f46412cdfc1959697f43b459cb8b8}{%
+           family={Forster},
+           familyi={F\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{3b1f46412cdfc1959697f43b459cb8b8}
+      \strng{fullhash}{3b1f46412cdfc1959697f43b459cb8b8}
+      \strng{bibnamehash}{3b1f46412cdfc1959697f43b459cb8b8}
+      \strng{authorbibnamehash}{3b1f46412cdfc1959697f43b459cb8b8}
+      \strng{authornamehash}{3b1f46412cdfc1959697f43b459cb8b8}
+      \strng{authorfullhash}{3b1f46412cdfc1959697f43b459cb8b8}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2016 IEEE 20th Jubilee International Conference on Intelligent Engineering Systems (INES)}
+      \field{title}{Louvain community detection with parallel heuristics on GPUs}
+      \field{year}{2016}
+      \field{pages}{227\bibrangedash 232}
+      \range{pages}{6}
+    \endentry
+    \entry{pruning}{article}{}
+      \name{author}{3}{}{%
+        {{hash=283d59ec39371023fe0dff3008c01cf9}{%
+           family={Ozaki},
+           familyi={O\bibinitperiod},
+           given={Naoto},
+           giveni={N\bibinitperiod}}}%
+        {{hash=33f4ca23adb0337e38801227824eeff7}{%
+           family={Tezuka},
+           familyi={T\bibinitperiod},
+           given={Hiroshi},
+           giveni={H\bibinitperiod}}}%
+        {{hash=e0415aaf876083cbaf07b564a561dcdb}{%
+           family={Inaba},
+           familyi={I\bibinitperiod},
+           given={Mary},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IACSIT Press}%
+      }
+      \strng{namehash}{f03b04d1555e3e47dde9caa2d2a58c93}
+      \strng{fullhash}{f03b04d1555e3e47dde9caa2d2a58c93}
+      \strng{bibnamehash}{f03b04d1555e3e47dde9caa2d2a58c93}
+      \strng{authorbibnamehash}{f03b04d1555e3e47dde9caa2d2a58c93}
+      \strng{authornamehash}{f03b04d1555e3e47dde9caa2d2a58c93}
+      \strng{authorfullhash}{f03b04d1555e3e47dde9caa2d2a58c93}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Computer and Electrical Engineering}
+      \field{number}{3}
+      \field{title}{A simple acceleration method for the Louvain algorithm}
+      \field{volume}{8}
+      \field{year}{2016}
+      \field{pages}{207}
+      \range{pages}{1}
+    \endentry
+    \entry{naim2017community}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=e9bb7eeb380c8c070ab74da995f6bd5f}{%
+           family={Naim},
+           familyi={N\bibinitperiod},
+           given={Md},
+           giveni={M\bibinitperiod}}}%
+        {{hash=38ade985df01e345f313c012eec7032a}{%
+           family={Manne},
+           familyi={M\bibinitperiod},
+           given={Fredrik},
+           giveni={F\bibinitperiod}}}%
+        {{hash=c1c353099ba8159299511ad1ce163dcb}{%
+           family={Halappanavar},
+           familyi={H\bibinitperiod},
+           given={Mahantesh},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d26b65f21aba12c7a600ad7e520fc35f}{%
+           family={Tumeo},
+           familyi={T\bibinitperiod},
+           given={Antonino},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{a2e2c8860e2d0db02945e8ac8d4285e5}
+      \strng{fullhash}{05e3c772f1fa2058d8817bce577ef277}
+      \strng{bibnamehash}{a2e2c8860e2d0db02945e8ac8d4285e5}
+      \strng{authorbibnamehash}{a2e2c8860e2d0db02945e8ac8d4285e5}
+      \strng{authornamehash}{a2e2c8860e2d0db02945e8ac8d4285e5}
+      \strng{authorfullhash}{05e3c772f1fa2058d8817bce577ef277}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2017 IEEE International Parallel and Distributed Processing Symposium (IPDPS)}
+      \field{title}{Community detection on the GPU}
+      \field{year}{2017}
+      \field{pages}{625\bibrangedash 634}
+      \range{pages}{10}
     \endentry
     \entry{cuda_manual}{online}{}
       \field{sortinit}{2}
