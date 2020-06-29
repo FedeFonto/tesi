@@ -280,6 +280,44 @@
       \verb http://dx.doi.org/10.1103/PhysRevE.70.066111
       \endverb
     \endentry
+    \entry{Newman_greedy}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4bf3b98e94373b42e6f6e6dfddaf4daa}{%
+           family={Newman},
+           familyi={N\bibinitperiod},
+           given={M.\bibnamedelimi E.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society (APS)}%
+      }
+      \strng{namehash}{4bf3b98e94373b42e6f6e6dfddaf4daa}
+      \strng{fullhash}{4bf3b98e94373b42e6f6e6dfddaf4daa}
+      \strng{bibnamehash}{4bf3b98e94373b42e6f6e6dfddaf4daa}
+      \strng{authorbibnamehash}{4bf3b98e94373b42e6f6e6dfddaf4daa}
+      \strng{authornamehash}{4bf3b98e94373b42e6f6e6dfddaf4daa}
+      \strng{authorfullhash}{4bf3b98e94373b42e6f6e6dfddaf4daa}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1550-2376}
+      \field{journaltitle}{Physical Review E}
+      \field{month}{6}
+      \field{number}{6}
+      \field{title}{Fast algorithm for detecting community structure in networks}
+      \field{volume}{69}
+      \field{year}{2004}
+      \verb{doi}
+      \verb 10.1103/physreve.69.066133
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1103/PhysRevE.69.066133
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1103/PhysRevE.69.066133
+      \endverb
+    \endentry
     \entry{Newman_2004}{article}{}
       \name{author}{2}{}{%
         {{hash=4bf3b98e94373b42e6f6e6dfddaf4daa}{%
@@ -665,6 +703,105 @@
       \verb http://dx.doi.org/10.1016/j.physrep.2009.11.002
       \endverb
     \endentry
+    \entry{florida-matrix}{article}{}
+      \name{author}{2}{}{%
+        {{hash=65d91744b06296f07cba0205480151ba}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={Timothy\bibnamedelima A.},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=855f3b81b4485b5f0dcd527f5803bb66}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Yifan},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{7bc47d8c25cee5d3937590eb9894f295}
+      \strng{fullhash}{7bc47d8c25cee5d3937590eb9894f295}
+      \strng{bibnamehash}{7bc47d8c25cee5d3937590eb9894f295}
+      \strng{authorbibnamehash}{7bc47d8c25cee5d3937590eb9894f295}
+      \strng{authornamehash}{7bc47d8c25cee5d3937590eb9894f295}
+      \strng{authorfullhash}{7bc47d8c25cee5d3937590eb9894f295}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0098-3500}
+      \field{journaltitle}{ACM Trans. Math. Softw.}
+      \field{month}{12}
+      \field{number}{1}
+      \field{title}{The University of Florida Sparse Matrix Collection}
+      \field{volume}{38}
+      \field{year}{2011}
+      \verb{doi}
+      \verb 10.1145/2049662.2049663
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/2049662.2049663
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/2049662.2049663
+      \endverb
+      \keyw{performance evaluation,sparse matrices,Graph drawing,multilevel algorithms}
+    \endentry
+    \entry{alcantara2012building}{incollection}{}
+      \name{author}{6}{}{%
+        {{hash=3a726698c7d57051391f6cc34db0bca6}{%
+           family={Alcantara},
+           familyi={A\bibinitperiod},
+           given={Dan\bibnamedelima A},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=72c0d96d1ebc37b04cd52c2c9638452f}{%
+           family={Volkov},
+           familyi={V\bibinitperiod},
+           given={Vasily},
+           giveni={V\bibinitperiod}}}%
+        {{hash=1a7276d9b8a47520371180cbf8cc41df}{%
+           family={Sengupta},
+           familyi={S\bibinitperiod},
+           given={Shubhabrata},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4dbcb1c7060726deee27d97b4bf31321}{%
+           family={Mitzenmacher},
+           familyi={M\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3abd271e57ac317eba30410ddecb9dbb}{%
+           family={Owens},
+           familyi={O\bibinitperiod},
+           given={John\bibnamedelima D},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=3801643f38748f7da022ea9ed456be84}{%
+           family={Amenta},
+           familyi={A\bibinitperiod},
+           given={Nina},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{cb1ca776c5c2f8dd2f20bec0c0601044}
+      \strng{fullhash}{ef9bd02252f769632bf6fd3e2e0d7a1e}
+      \strng{bibnamehash}{cb1ca776c5c2f8dd2f20bec0c0601044}
+      \strng{authorbibnamehash}{cb1ca776c5c2f8dd2f20bec0c0601044}
+      \strng{authornamehash}{cb1ca776c5c2f8dd2f20bec0c0601044}
+      \strng{authorfullhash}{ef9bd02252f769632bf6fd3e2e0d7a1e}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{GPU Computing Gems Jade Edition}
+      \field{title}{Building an efficient hash table on the GPU}
+      \field{year}{2012}
+      \field{pages}{39\bibrangedash 53}
+      \range{pages}{15}
+    \endentry
     \entry{cheong2013hierarchical}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=aa8eead4507deb0fb8743a31dc7c10a3}{%
@@ -706,6 +843,58 @@
       \field{year}{2013}
       \field{pages}{775\bibrangedash 787}
       \range{pages}{13}
+    \endentry
+    \entry{konect}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=783acda4813bfe14364427f83804ce7a}{%
+           family={Kunegis},
+           familyi={K\bibinitperiod},
+           given={J{é}r{ô}me},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{783acda4813bfe14364427f83804ce7a}
+      \strng{fullhash}{783acda4813bfe14364427f83804ce7a}
+      \strng{bibnamehash}{783acda4813bfe14364427f83804ce7a}
+      \strng{authorbibnamehash}{783acda4813bfe14364427f83804ce7a}
+      \strng{authornamehash}{783acda4813bfe14364427f83804ce7a}
+      \strng{authorfullhash}{783acda4813bfe14364427f83804ce7a}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 22nd International Conference on World Wide Web}
+      \field{title}{Konect: the koblenz network collection}
+      \field{year}{2013}
+      \field{pages}{1343\bibrangedash 1350}
+      \range{pages}{8}
+    \endentry
+    \entry{snap}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=900d107125ff0ca84698cb909e4f6c51}{%
+           family={Leskovec},
+           familyi={L\bibinitperiod},
+           given={Jure},
+           giveni={J\bibinitperiod}}}%
+        {{hash=767ff42ec330eeedea785558d350f6fa}{%
+           family={Krevl},
+           familyi={K\bibinitperiod},
+           given={Andrej},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b6c59a3c7880c51055cf3864633578b}
+      \strng{fullhash}{8b6c59a3c7880c51055cf3864633578b}
+      \strng{bibnamehash}{8b6c59a3c7880c51055cf3864633578b}
+      \strng{authorbibnamehash}{8b6c59a3c7880c51055cf3864633578b}
+      \strng{authornamehash}{8b6c59a3c7880c51055cf3864633578b}
+      \strng{authorfullhash}{8b6c59a3c7880c51055cf3864633578b}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://snap.stanford.edu/data}}
+      \field{month}{6}
+      \field{title}{{SNAP Datasets}: {Stanford} Large Network Dataset Collection}
+      \field{year}{2014}
     \endentry
     \entry{wickramaarachchi2014fast}{inproceedings}{}
       \name{author}{4}{}{%
@@ -1080,6 +1269,7 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{fortunato2007community}
 \endrefsection
 \endinput
 
