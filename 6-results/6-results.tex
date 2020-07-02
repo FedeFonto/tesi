@@ -1,11 +1,6 @@
 \section{Performance and Analysis}
-Scaletta:\\
-- presentazione datatset (con grafici sulla distribuzione dei degree)\\
-- risultati ottenuti (modularità e tempo) sull'intero dataset rispetto sequenziale\\
-- analisi prima fase ottimizzazione dei due algoritmi e fast move\\
-- analisi aggregazione\\
-- algoritmo ibrido\\
-
+In this chapter we present the results obtained by these two algorithm. We use 13 dataset to test the algorithm, and we analyze the performance globally on the entire algorithm but also locally on specific phases and sub-phases in order to highlight the point of strengths and the weakness of both the algorithm. In this chapter we firstly present the datasets on which we have executed our test. Then we give an overlook on the results obtained that are useful for the subsequent analysis which, in turn, we dived in two parts: in the first part we analyze the contribution of the pruning approach on each algorithm; in the second part we make a comparison between the two algorithms, in order to enhance when one algorithm performs better than the other. Next we present an adaptive algorithm that implements the logic of the two algorithm and select to use the best basing on the situation.
+In the end we make a comparison between our adaptive algorithm and other two Louvain algorithm for the GPU already available in two libraries: the first one is included in the NVIDIA's cuGraph library; the second one in the Gunrock library.
 \subsection{Datasets}
 In this section we present the 13 dataset used in this thesis. These datasets coming from three main sources: the Stanford Stanford Large Network Dataset Collection (also known as SNAP) \cite{snap}, the Florida Sparse Matrix Collection \cite{florida-matrix} and the the Koblenz Network Collection (also known as KONECT)  \cite{konect}. In the Table \ref{tab:dataset} there are a briefly presentation of the dataset and in Figure \ref{fig:dataset-degree-distribution} there are the degree distribution of the graphs.  We point out that even if all this graph are unweighted, some of it are directed: during the parsing phase we doesn't keep the "directness" of the graph, and we treat it as a undirected one as required from the algorithm. In addition, if in the original graph there are some repeated edges, we consider it once. In the table \ref{tab:dataset} the number of edges are those obtained after this parsing, ordered by increasing edges number. Now we present the datasets:
 \begin{table}
@@ -115,7 +110,7 @@ First of all, we analyze the modularity score obtained by the two algorithms res
 	\caption{\label{tab:execution_time}Execution Time in milliseconds}
 \end{table} \\
 In the Table \ref{tab:execution_time} there are the execution time of the two algorithms respect to the sequential version. We notice a big improvement in the performance for both the algorithm respect to the sequential version: we obtain a speed-up in range of a variable factor from 12 to 56 for our two algorithms. 
-
+Besides, we notice that, according to the graph analyzed, the two algorithms obtain different performance. In some case one approach outperforms the other of even more than one second. In the following sections we analyze in details this two algorithm to discover the motivation of this different performances.  
 \subsection{Pruning analysis}
 In this section, we analyze the effectiveness of the pruning approach: we focus our research on the first optimization phase. As we said previously, the first optimization phase is the most time-requiring phase, consuming about 80\% of the time \cite{wickramaarachchi2014fast}, so the pruning approach should increase the performance especially in this phase.
 \begin{figure}[h]
@@ -124,41 +119,68 @@ In this section, we analyze the effectiveness of the pruning approach: we focus 
 	\caption{Percentage of edge analyze in the first optimization phase}
 	\label{fig:edge-percentage}
 \end{figure}
-We start from the Prune-Sort-Reduce version: first of all we present the percentage of the edges that we analyze in each iteration of the optimization phase (Figure \ref{fig:edge-percentage}). Exluding certain fluctuation at the earliest stage (we remark also that the two graph with the highest noise are two syntetic ones, i.e. packing-500x100x100-b050 and delaunay\_n23), we notice that the portion of the edges analyzed tend to decrease iteration by iteration. The percentage of reduction highly depends on the graph exterminated: we have the smallest reduction for the wikipedia\_link\_ja (only the $\sim\%2$ of the total are excluded in the last iteration); instead, in the graph packing-500x100x100-b050, we have run the optimization only on the $\sim\%50$ of the edges of the graph in last iteration. There are any direct correlation between the decrease of the number of the edges analyzed and the degree distribution of the nodes presented in Figure \ref{fig:dataset-degree-distribution}.
+First of all we present the percentage of the edges that we analyze in each iteration of the optimization phase (Figure \ref{fig:edge-percentage}). The number of the edges analyze are quite similar for both the algorithms. Exluding certain fluctuation at the earliest stage (we remark also that the two graph with the highest noise are two syntetic ones, i.e. packing-500x100x100-b050 and delaunay\_n23), we notice that the portion of the edges analyzed tend to decrease iteration by iteration. The percentage of reduction highly depends on the graph exterminated: we have the smallest reduction for the wikipedia\_link\_ja (only the $\sim\%2$ of the total are excluded in the last iteration); instead, in the graph packing-500x100x100-b050, we have run the optimization only on the $\sim\%50$ of the edges of the graph in last iteration. Our study on the dataset doesn't find any direct correlation between the decrease of the number of the edges analyzed and the degree distribution of the nodes presented in Figure \ref{fig:dataset-degree-distribution}.
+\subsubsection{Prune-Sort-Reduce algorithm analysis}
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\linewidth]{0-resources/edge-percentage}
-	\caption{CAMBIARE IMMAGINE}
+	\includegraphics[width=0.7\linewidth]{0-resources/sort-prune-vs-no-prune}
+	\caption{AGGIUNGERE LABEL}
 	\label{fig:prun-vs-no}
 \end{figure}
-Now we evaluate the impact in terms of time of the pruning approach in the Prune-Sort-Reduce algorithm: to do this, we create a comparison version of the algorithm from the presented one. This version doesn't prune the node in the Copy sub-phase and doesn't collect the data used to create the support pruning array in the last two sub-phases (the first one only update the community assign to each node; the second one is skipped). The results are illustrated in the Figure \ref{fig:prun-vs-no}. We exclude from this graphic the first iteration because this one doesn't make the same step of the other due to its special optimization (Chapter \ref{f-1}). We notice that the reduction in terms of times in the pruning version is proportional to the reduction of edges analyzed. 
+Now we evaluate the impact in terms of time of the pruning approach in the Prune-Sort-Reduce algorithm: to do this, we create a comparison version of the algorithm from the presented one. This version doesn't prune the node in the Copy sub-phase and doesn't collect the data used to create the support pruning array in the last two sub-phases (the first one only update the community assign to each node; the second one is skipped). The execution times of each iteration are illustrated in the Figure \ref{fig:prun-vs-no}. We exclude from this graphic the first iteration because this one doesn't make the same step of the other due to its special optimization (Chapter \ref{f-1}). We notice that the reduction in terms of times in the pruning version is proportional to the reduction of edges analyzed: in the graph in which the reduction of the edges analyzed highly decrease, the pruning version outperform the the standard version; in the graph in which the reduction in terms of edges are small, the execution times are quite similar or the pruning algorithm is slower up to $\sim15$ ms at iteration (like in the graph dbpedia-link) due to the fact that the computation of the pruning information requires some extra time but the reduction that leads to is smaller. We notice that the execution times decrease iteration by iteration even for the version without the pruning: this is caused by the reduction in terms of the time of the update subphase, as we can see in the \ref{fig:livejournal-comparison} is illustrated the contribution of each sub-phase in terms of time to for each iteration for the pruning version and the standard in the LiveJournal1 dataset.
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{0-resources/livejournal-comparison-sort.png}
+	\caption{}
+	\label{fig:livejournal-comparison}
+\end{figure}
+We notice that the Sort sub-phase is the most consuming one and this behaviour is similar also in the other graph: this sub-phase at least 50\% of the time, reaching peek of even more than 80\% of the time in the first and in the last graph (Figure \ref{fig:suphases-sort}). From the Figure \ref{fig:livejournal-comparison}, we notice also that the pruning on the data in input have a direct effect on the sorting phase and the decreasing in terms of time is proportional to the number of the edges pruned (as we can see by comparing Figure \ref{fig:suphases-sort} and Figure \ref{fig:edge-percentage}). The pruning update has a small impact to the total execution time. 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\linewidth]{0-resources/suphases-sort.png}
+	\includegraphics[width=1\linewidth]{0-resources/suphases-sort}
 	\caption{}
 	\label{fig:suphases-sort}
 \end{figure}
-In the Figure \ref{fig:suphases-sort} is illustrated the contribution of each sub-phase in terms of time to the total one for each iteration.
-As expected, the Sort sub-phase is the most consuming one: indeed this sub-phase at least 50\% of the time, reaching even more than 80\% of the time in the first and in the last graph. We notice also that the pruning on the data in input have a direct effect on the sorting phase and the greatest gain in terms of time become from the optimization of this sub-phase. 
+In conclusion, even if the pruning approach isn't always effective and can introduce a little overhead, the gain in terms of time that we obtain when we prune a portion of the edges are high, therefore adding the pruning approach is a valid optimization techniques for the algorithm that use a Sort-Reduce pattern to aggregate the edges. 
+\subsubsection{Hashmap algorithm analysis}
 
-
+\newpage
 \subsection{Algorithms comparison}
 In this section, we focus our analysis on the comparison between the two algorithm in order to find advantages and disadvantages of each method. 
 First of all, we notice from the Table \ref{tab:mod} that the two algorithm obtain a very similar score of modularity. In the Figure \ref{fig:modularity-progression}, we expose the progression of the modularity $Q$ in the first operation. As we can see, the modularity in the two algorithms grows in almost identical way: this is due to the minimum labelling heuristic (Chapter \ref{parallel-imp}) that force the algorithms to converge to a similar result. 
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics[width=1\linewidth]{0-resources/modularity-progression}
 	\caption{Modularity Progression in the first iteration}
 	\label{fig:modularity-progression}
 \end{figure} 
-
-First of all, we compare the iterations of the first optimization phase in terms of times ()
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{0-resources/first-hash-sort}
+	\caption{}
+	\label{fig:first-hash-sort}
+\end{figure}
+We analyze the impact of the optimization of the first iteration of the optimization phase for both the algorithms. We are expecting an huge reduction in terms of times, considering that we remove the most consuming time phase from the Prune-Sort-Reduce routine, i.e. the sorting phase. As shown in the Figure \ref{fig:first-hash-sort}, we obtain the expected results: we obtain a reduction in range between $\sim 51\%$ and $\sim 86\%$ respect to the Prune-Sort-Reduce approach and a reduction in range between $\sim 84\%$ and $\sim 95\%$ respect to the Hashmap approach. From the data we also see that in the Hashmap version of the algorithm, this optimization introduce a little delay in the next iteration respect to the first one: this is caused by the deallocation of the support variable used in the fast approach (that are the same used in the Prune-Sort-Reduce algorithm) and the allocation of the Hashmap variables. But, this overhead is much smaller than the gain that we have using the optimization, therefore we consider it a valid technique to improve the performance.
+From the Figure \ref{fig:first-hash-sort}, we notice that the Hashmap version is always slower with respect to the Sort-Reduce version, and for this reason this technique has a greater impact on it in percentage. Considering this particular feature, we choose to go further in our analysis: we compare the iterations of the first optimization phase in terms of times of the two version of the algorithms, excluding the first iteration.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{0-resources/hash-vs-sort}
 	\caption{Time of the first ten iteration of the first optimization phase.}
 	\label{fig:hash-vs-sort}
+\end{figure}[h]
+In the Figure \ref{fig:hash-vs-sort} are exposed the results. We notice that the second iteration of the Hashmap algorithm is always slower respect to the Sort-Reduce version. We notice also that in the Hashmap version the execution time tend to decrease even in the case in which the pruning doesn't remove a considerable part of the edges (like the wikipedia\_link\_jp dataset). Therefore we focus our analysis on this behaviour of the map: we notice that, iteration by iteration, the number of conflicts in the maps decrease: the reason is that, at each iteration, the  number of different keys decrease. Indeed, at every iteration the number of communities decrease because similar nodes tends to converge to one communities. Then, we analyze the number different keys inserted in the map.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{0-resources/time-vs-possible-keys}
+	\caption{}
+	\label{fig:time-vs-possible-keys}
 \end{figure}
+In the Figure \ref{time-vs-possible-keys}, we have on the x-axis the number of different keys at that iteration with respect to the maximum possible number of keys (i.e. the number of edges, because we have the maximum when each node is in its self-community); on the y-axes we have the execution times. We notice that there is a direct correlation between this data and this two values: this information is very important, because by comparing this value with the sorting time, we can estimate if the Hashmap algorithm performs better than the Sort-Reduce version.\\
+We analyze also the other optimization phase. We notice that even if number of conflicts decrease, also the time of the sorting sub-phase of the other algorithm decrease: for this reason the sorting version of the algorithm perform better than the hashmap one.
 
+To study the difference between the algorithms, we consider also the aggregation phases: 
 
+All of these consideration are at the base of the adaptive approach that we present in the next section.	
+\subsection{Adaptive Algorithm}
+\subsection{Results Comparison}
 
