@@ -1,4 +1,4 @@
-\section{Nvidia GPUs architecture and CUDA}
+\section{Nvidia GPUs architecture and CUDA}\label{C2}
 Scientists, years by years, face bigger and bigger problems. 
 Even if Moore's law (that said: "the number of transistors in an integrated circuit double about every two years") determines the increased power of the CPU since the sixties, even the problems size grows and it grows also much more quickly. For example, the web growth since the turn of the millennium raises new challenges that are hard to solve with standard algorithms.  \\
 Besides, at the same time, the manufacturers face some serious physical limits. The increase in performance was made possible by the reduction in the size of the transistors and the increase in the frequency of the clock cycle. In the first half of the two-thousands, the producers discovered that reducing, even more, the size causes serious problems of heat dissipation and data synchronization. To find a solution to this problems, the manufactures start to produce multi-core CPUs: the idea is that if it's impossible to increase further the speed with only one core, they add another processing unit, to ideally halve the execution time.\\
@@ -22,7 +22,7 @@ Even if in recent time the multi-core CPU performance get closer to the performa
 \end{figure} 
 \\	
 For those reasons, the GPU-accelerated applications are the most effective to solve big problems, due to the possibility of reach very high speed-up compared to the classic multi-core applications. 
-To simplify the development of this type of applications, in 2007, Nvidia releases CUDA (Compute Unified Device Architecture), a parallel computing platform and application programming interface (API) model.
+To simplify the development of this type of applications, in 2007, Nvidia releases CUDA (Compute Unified Device Architecture), a parallel computing platform and application programming interface model.
 Nowadays, the CUDA framework is one of the main tools to develop HPC applications, due to its performance and simple API, and for this, we choose to use it in this project.
 In this chapter, we first present the Nvidia's GPU architecture, then we present CUDA and Thrust, a parallel computing library. This chapter was based on \cite{turing} and \cite{cuda_manual}.
 \subsection{Nvidia's GPU Architecture}
