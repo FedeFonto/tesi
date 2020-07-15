@@ -1213,6 +1213,20 @@
       \verb https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html
       \endverb
     \endentry
+    \entry{gunrock_hive}{online}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labeltitlesource}{title}
+      \field{title}{HIVE workflow report for Louvain GPU implementation}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://gunrock-docs.readthedocs.io/en/latest/hive/hive_louvain/#community-detection-louvain
+      \endverb
+      \verb{url}
+      \verb https://gunrock-docs.readthedocs.io/en/latest/hive/hive_louvain/#community-detection-louvain
+      \endverb
+    \endentry
     \entry{turing}{online}{}
       \field{sortinit}{2}
       \field{sortinithash}{cbff857e587bcb4635511624d773949e}
@@ -1268,8 +1282,35 @@
       \verb 1911.11313
       \endverb
     \endentry
+    \entry{cuGraph}{online}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labeltitlesource}{title}
+      \field{title}{cuGraph}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/rapidsai/cugraph
+      \endverb
+      \verb{url}
+      \verb https://github.com/rapidsai/cugraph
+      \endverb
+    \endentry
+    \entry{gunrock}{online}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labeltitlesource}{title}
+      \field{title}{Gunrock}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://gunrock.github.io/docs/#/
+      \endverb
+      \verb{url}
+      \verb https://gunrock.github.io/docs/#/
+      \endverb
+    \endentry
   \enddatalist
-  \missing{fortunato2007community}
 \endrefsection
 \endinput
 

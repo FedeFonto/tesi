@@ -1,29 +1,28 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
 [0] Config.pm:307> INFO - Logfile is 'main.blg'
 [30] biber-MSWIN64:315> INFO - === 
-[59] Biber.pm:371> INFO - Reading 'main.bcf'
-[162] Biber.pm:889> INFO - Found 33 citekeys in bib section 0
-[174] Biber.pm:4093> INFO - Processing section 0
-[187] Biber.pm:4254> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
-[196] bibtex.pm:1523> INFO - LaTeX decoding ...
-[252] bibtex.pm:1340> INFO - Found BibTeX data source 'bibliography.bib'
-[254] Utils.pm:193> WARN - Duplicate entry key: 'Newman_2004' in file 'bibliography.bib', skipping ...
-[270] Utils.pm:193> WARN - month field 'Jan' in entry 'metastasis' is not an integer - this will probably not sort properly.
-[276] Utils.pm:193> WARN - month field 'Dec' in entry 'random' is not an integer - this will probably not sort properly.
-[287] Utils.pm:193> WARN - month field 'Feb' in entry 'fortunato' is not an integer - this will probably not sort properly.
-[303] Utils.pm:193> WARN - month field 'Dec' in entry 'resolution-limit' is not an integer - this will probably not sort properly.
-[311] Utils.pm:193> WARN - month field 'Feb' in entry 'Newman_2004' is not an integer - this will probably not sort properly.
-[314] Utils.pm:193> WARN - month field 'Jun' in entry 'Newman_greedy' is not an integer - this will probably not sort properly.
-[319] Utils.pm:193> WARN - month field 'Dec' in entry 'Clauset_2004' is not an integer - this will probably not sort properly.
-[323] Utils.pm:193> WARN - month field 'Feb' in entry 'Guimer__2005' is not an integer - this will probably not sort properly.
-[327] Utils.pm:193> WARN - month field 'Aug' in entry 'eo' is not an integer - this will probably not sort properly.
-[333] Utils.pm:193> WARN - month field 'Oct' in entry 'Blondel_2008' is not an integer - this will probably not sort properly.
-[342] Utils.pm:193> WARN - month field 'Sep' in entry 'rand' is not an integer - this will probably not sort properly.
-[401] Utils.pm:193> WARN - I didn't find a database entry for 'fortunato2007community' (section 0)
-[437] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[438] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[60] Biber.pm:371> INFO - Reading 'main.bcf'
+[154] Biber.pm:889> INFO - Found 35 citekeys in bib section 0
+[167] Biber.pm:4093> INFO - Processing section 0
+[180] Biber.pm:4254> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[188] bibtex.pm:1523> INFO - LaTeX decoding ...
+[254] bibtex.pm:1340> INFO - Found BibTeX data source 'bibliography.bib'
+[257] Utils.pm:193> WARN - Duplicate entry key: 'Newman_2004' in file 'bibliography.bib', skipping ...
+[265] Utils.pm:193> WARN - month field 'Oct' in entry 'Blondel_2008' is not an integer - this will probably not sort properly.
+[288] Utils.pm:193> WARN - month field 'Jan' in entry 'metastasis' is not an integer - this will probably not sort properly.
+[295] Utils.pm:193> WARN - month field 'Dec' in entry 'random' is not an integer - this will probably not sort properly.
+[304] Utils.pm:193> WARN - month field 'Feb' in entry 'fortunato' is not an integer - this will probably not sort properly.
+[320] Utils.pm:193> WARN - month field 'Dec' in entry 'resolution-limit' is not an integer - this will probably not sort properly.
+[324] Utils.pm:193> WARN - month field 'Feb' in entry 'Newman_2004' is not an integer - this will probably not sort properly.
+[326] Utils.pm:193> WARN - month field 'Jun' in entry 'Newman_greedy' is not an integer - this will probably not sort properly.
+[331] Utils.pm:193> WARN - month field 'Dec' in entry 'Clauset_2004' is not an integer - this will probably not sort properly.
+[335] Utils.pm:193> WARN - month field 'Feb' in entry 'Guimer__2005' is not an integer - this will probably not sort properly.
+[339] Utils.pm:193> WARN - month field 'Aug' in entry 'eo' is not an integer - this will probably not sort properly.
+[348] Utils.pm:193> WARN - month field 'Sep' in entry 'rand' is not an integer - this will probably not sort properly.
+[437] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[438] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
 [438] Biber.pm:3921> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
 [438] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
 [472] bbl.pm:636> INFO - Writing 'main.bbl' with encoding 'UTF-8'
 [483] bbl.pm:739> INFO - Output to main.bbl
-[488] Biber.pm:110> INFO - WARNINGS: 13
+[488] Biber.pm:110> INFO - WARNINGS: 12

@@ -58,6 +58,19 @@ sorting=ynt
 	basicstyle=\footnotesize,
 }
 
+\newenvironment{dedication}
+	{\clearpage     
+		\section*{Ringraziamenti}      % we want a new page
+		\thispagestyle{empty}% no header and footer
+		\vspace*{\stretch{1}}% some space at the top 
+		\itshape             % the text is in italics
+		\raggedleft          % flush to the right margin
+	}
+	{\par % end the paragraph
+		\vspace{\stretch{3}} % space at bottom is three times that at the top
+		\clearpage           % finish off the page
+	}
+
 \lstset{style=mystyle}
 
 \addbibresource{bibliography.bib}
@@ -74,7 +87,7 @@ sorting=ynt
 	\begin{abstract}
 		Modularity based algorithms for the detection of communities are the de facto standard thanks to the fact that they offer the best compromise between efficiency and quality. 
 		This is because these algorithms allow analyzing graphs much larger than those that can be analyzed with alternative techniques. Among these, the Louvain algorithm has become extremely popular due to its simplicity, efficiency and precision.
-		In this thesis, we present an overview of community detection techniques and we propose two new parallel implementations of the Louvain algorithm written in CUDA and exploitable by Nvidia GPUs: the first one is based on the sort-reduce paradigm with a pruning approach on the input data; the second one is a new hash-based implementation. Experimental analysis conducted on 13 datasets of different sizes ranging from 15 to 150 million edges shows that the proposed algorithms have different efficiency based on the graph. For this reason, we study also an adaptive solution that try to improve the performance combining this two approaches. 
+		In this thesis, we present an overview of community detection techniques and we propose two new parallel implementations of the Louvain algorithm written in CUDA and exploitable by Nvidia GPUs, both with a new pruning approach on the input data: the first one is based on the sort-reduce paradigm; the second one is a new hash-based implementation. Experimental analysis conducted on 13 datasets of different sizes ranging from 15 to 150 million edges shows that the both algorithms provide some benefit, but there is not a clear winner. For this reason, we study also an adaptive solution that exploits the best of the two approaches. We compared this algorithm with the two fastest version available: the first is included in the Nvidia project cuGraph; the second in the high performance library Gunrock. Our algorithm performs better in terms of times in the largest graphs. Besides, we optimize the memory consumption: we can analyze graph of almost double size compared to our competitors. 
 	\end{abstract}
 
 	\tableofcontents
@@ -92,7 +105,25 @@ sorting=ynt
 	\input{6-results/6-results.tex}
 	\newpage
 	\input{7-conclusion/7-conclusion.tex}
+	\cleardoublepage
+	\begin{dedication}
+		Vorrei usare l'ultima pagina di questo elaborato, che rappresenta anche la fine di questa mia avventura universitaria, per ringraziare tutti coloro che mi hanno permesso di arrivare a scrivere su quest'ultimo foglio. \vspace{\baselineskip}
+		
+		Ringrazio innanzitutto il Professor Claudio Lucchese per avermi accompagnato  durante la stesura di questa tesi e per la disponibilità pressoché infinita ad aiutarmi a distendere tutti i miei dubbi, tecnici e non. \vspace{\baselineskip}
+		
+		Ringrazio la mia famiglia, ovverosia le fondamenta della mia vita, perché non avete smesso di supportarmi e spronarmi nonostante non sempre vi sia esattamente chiaro perché io mi stia innervosendo davanti al computer. \vspace{\baselineskip}
+		
+		Ringrazio i miei colleghi Fabio, Martina, Andrea, Marco e Kotono per avermi aiutato a raggiungere questo obbiettivo dedicandomi ore a risolvere null pointer nella giungla del mio codice e a spiegarmi come ha fatto il prof a ottenere quella formula sui loro appunti molto più ordinati dei miei.\vspace{\baselineskip}
+		
+		Ringrazio i miei amici, in particolar modo coloro che si identificano sotto il nome di "Quarantadue", per essere la mia risposta alla vita, l'universo e tutto quanto.\vspace{\baselineskip}
+		
+		Ringrazio in particolar modo il mio amico Edoardo Busetti per aver dato a me e Ludovica un nido accogliente nel quale scrivere la tesi durante i mesi di quarantena: torneremo a viaggiare, vecchio mio.\vspace{\baselineskip}
+		
+		E, dulcis in fundo, ringrazio Ludovica per essere la spalla su cui piangere, il sorriso con il quale ridere e semplicemente la persona con cui voglio condividere ogni istante. Grazie di esserci stata sempre. 
+		
+	\end{dedication}
 	\newpage
+	\cleardoublepage
 	\printbibliography
 
 \end{document}
